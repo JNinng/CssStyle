@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Parallax</title>
+
+		<link rel="stylesheet" href="/assects/css/parallax.css" />
+		<script src="/assects/js/parallax.js"></script>
+		<script>
+			window.onload = function () {
+				let bg = document.getElementById("bg");
+				let item = document.getElementById("item");
+				let parallax = new Parallax(bg, 12);
+				let parallax1 = new Parallax(item, -0.4);
+			};
+		</script>
+	</head>
+	<body>
+		<div id="root">
+			<div id="bg"></div>
+			<div id="item" class="item"></div>
+		</div>
+	</body>
+</html>
