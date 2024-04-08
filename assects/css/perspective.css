@@ -1,0 +1,99 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+
+	height: 100vh;
+
+	background-image: linear-gradient(to bottom right, #99c0f9, #d7b3e3, #f9bccc);
+
+	justify-content: center;
+	align-items: center;
+	perspective: 1800px;
+}
+
+h1 {
+	margin-bottom: 30px;
+
+	font: 800 32px;
+
+	color: #7878f9;
+
+	text-shadow: 0 0 10px rgba(138, 84, 255, .8);
+
+	transform: translateZ(35px);
+}
+
+.shell {
+	display: flex;
+
+	border-radius: 15px;
+	padding: 35px;
+
+	background: #fff;
+
+	box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+
+	transform-style: preserve-3d;
+	flex-direction: column;
+}
+
+.boxs {
+	display: flex;
+
+	width: 730px;
+
+	justify-content: space-between;
+}
+
+.box {
+	display: inline-block;
+	overflow: hidden;
+
+	position: relative;
+
+	border-radius: 10px;
+	width: 230px;
+	height: 250px;
+
+	text-align: center;
+
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, .3);
+
+	transform: translatez(35px);
+
+	perspective: 1200px;
+	transform-style: preserve-3d;
+}
+
+.img {
+	position: relative;
+
+	height: 100%;
+}
+
+.bg {
+	position: absolute;
+
+	width: 100%;
+	height: 100%;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	transform: scale(1.1);
+}
+
+.one .img {
+	top: -20px;
+	left: -20px;
+
+	height: 120%;
+}
+
+.one .bg {
+	/* background-image: url('/assects/img/3.png'); */
+}
