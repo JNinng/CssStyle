@@ -1,0 +1,437 @@
+* {
+	/* 初始化 */
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	/* 弹性布局 居中 */
+	display: flex;
+
+	height: 100vh;
+
+	background-color: var(--bg-color);
+
+	justify-content: center;
+	align-items: center;
+
+/* 自定义属性（变量），通过var函数进行调用 */
+	--bg-color: #161616;
+}
+
+.root {
+	/* 弹性布局 */
+	display: flex;
+
+	width: 700px;
+
+/* 平均分配宽度给每一个子元素 */
+
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.snowy,
+.thunder-storm,
+.shower,
+.item {
+	display: flex;
+
+/* 相对定位 */
+
+	position: relative;
+
+	margin: 26px;
+	width: 100px;
+	height: 100px;
+
+	justify-content: center;
+	align-items: center;
+}
+
+/* 云朵 */
+.cloud {
+	/* 绝对定位 */
+	position: absolute;
+
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+
+	background-color: var(--bg-color);
+
+/* 阴影：水平位置 垂直位置 模糊距离 阴影大小 阴影颜色 */
+
+	box-shadow: -35px 11px 0 -11px var(--bg-color), 33px 15px 0 -15px var(--bg-color), 0 0 0 6px lightgray,
+	-35px 11px 0 -5px lightgray, 33px 15px 0 -9px lightgray;
+
+	/* --bg-color: red; */
+}
+
+/* 让云朵下边为直边 */
+.cloud::after {
+	position: absolute;
+	bottom: 0;
+	left: -8px;
+
+	width: 73px;
+	height: 16px;
+
+	background-color: var(--bg-color);
+
+	box-shadow: 0 6px 0 0 lightgray;
+
+	content: '';
+}
+
+/* 云朵下边的镂空区域 */
+.snow,
+.lightning,
+.rain {
+	position: absolute;
+	top: 55%;
+	left: 20%;
+
+	width: 60px;
+	height: 60px;
+
+	background-color: var(--bg-color);
+}
+
+.clouds {
+	position: absolute;
+	top: 26%;
+	left: 8%;
+
+	width: 60px;
+	height: 60px;
+
+	background-color: var(--bg-color);
+
+	transform: scale(.9);
+}
+
+/* 雪花 */
+.snow span::before,
+.snow span::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	margin-top: -16px;
+	margin-left: -16px;
+
+	color: #fff;
+
+	opacity: .2;
+
+/* 执行动画：动画名 时长 线性的 无限次播放 */
+
+	animation: spin 6s linear infinite;
+
+	content: '\2745';
+}
+
+.snow span::after {
+	margin-top: 2px;
+	margin-left: -26px;
+
+	font-size: 24px;
+
+	opacity: .4;
+
+/* 执行动画：动画名 时长 线性的 无限次播放 反向的 */
+
+	animation: spin 12s linear infinite reverse;
+}
+
+.snow span:nth-child(2)::before {
+	margin-top: -9px;
+	margin-left: 4px;
+
+	font-size: 20px;
+
+	opacity: .2;
+
+/* 执行动画：动画名 时长 线性的 无限次播放 */
+
+	animation: spin 8s linear infinite;
+}
+
+.snow span:nth-child(2)::after {
+	margin-top: 10px;
+	margin-left: 1px;
+
+	font-size: 32px;
+
+	opacity: .4;
+
+/* 执行动画：动画名 时长 线性的 无限次播放 反向的 */
+
+	animation: spin 14s linear infinite reverse;
+}
+
+/* 闪电 */
+.lightning span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	margin-top: -4px;
+	margin-left: -2px;
+
+	color: #fff;
+
+	opacity: .3;
+
+/* 执行动画 */
+
+	animation: lightning 2s linear infinite;
+}
+
+.lightning span:nth-child(2) {
+	margin-top: 8px;
+	margin-left: 10px;
+	width: 8px;
+	height: 4px;
+
+	opacity: .2;
+
+/* 设置第二个闪电的动画时长短一点 */
+
+	animation-duration: 1.5s;
+}
+
+.lightning span::before,
+.lightning span::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	margin-top: -26px;
+	margin-left: -16px;
+	border-top: 20px solid transparent;
+
+/* currentColor表示当前color的值，这里为#fff */
+	border-right: 12px solid currentColor;
+	border-bottom: 12px solid currentColor;
+	border-left: 8px solid transparent;
+
+	transform: skewX(-10deg);
+
+	content: '';
+}
+
+.lightning span::after {
+	margin-top: -4px;
+	margin-left: -4px;
+	border-top: 12px solid currentColor;
+	border-right: 8px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 12px solid currentColor;
+}
+
+.lightning span:nth-child(2) {
+	transform: scale(.5);
+}
+
+/* 阵雨的雨滴区域偏右一点 */
+.shower .rain {
+	right: 10px;
+	left: auto;
+}
+
+/* 太阳 */
+
+.item .sun {
+	position: absolute;
+	z-index: -1;
+
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+
+	background-color: var(--bg-color);
+
+	box-shadow: 0 0 0 6px orange;
+
+	animation: spin 12s linear infinite;
+}
+
+/* 光线 */
+.item .sun .rays {
+	position: absolute;
+	top: -32px;
+	left: 50%;
+
+	border-radius: 4px;
+	width: 6px;
+	height: 18px;
+
+	background-color: yellow;
+
+	box-shadow: 0 86px yellow;
+
+	transform: translateX(-50%);
+}
+
+.item .sun .rays::before,
+.item .sun .rays::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	border-radius: 4px;
+	width: 6px;
+	height: 18px;
+
+	background-color: yellow;
+
+	box-shadow: 0 86px yellow;
+
+	transform: rotate(60deg);
+	transform-origin: 50% 52px;
+
+	content: '';
+}
+
+.item .sun .rays::after {
+	transform: rotate(-60deg);
+}
+
+.shower .min-sun {
+	position: absolute;
+	top: 18px;
+	right: -4px;
+	z-index: -1;
+
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+
+	background-color: var(--bg-color);
+
+	box-shadow: 0 0 0 6px rgb(206, 140, 18);
+
+	animation: spin 12s linear infinite;
+}
+
+/* 光线 */
+.shower .min-sun .rays {
+	position: absolute;
+	top: -32px;
+	left: 50%;
+
+	border-radius: 4px;
+	width: 6px;
+	height: 18px;
+
+	background-color: rgba(219, 219, 48, .712);
+
+	box-shadow: 0 86px rgba(219, 219, 48, .712);
+
+	transform: translateX(-50%);
+}
+
+.shower .min-sun .rays::before,
+.shower .min-sun .rays::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	border-radius: 4px;
+	width: 6px;
+	height: 18px;
+
+	background-color: rgba(219, 219, 48, .712);
+
+	box-shadow: 0 86px rgba(219, 219, 48, .712);
+
+	transform: rotate(60deg);
+	transform-origin: 50% 52px;
+
+	content: '';
+}
+
+.shower .min-sun .rays::after {
+	transform: rotate(-60deg);
+}
+
+.shower .rain::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	margin-top: -16px;
+	margin-left: -4px;
+	border-radius: 100% 0 60% 50% / 60% 0 100% 50%;
+	width: 18px;
+	height: 18px;
+
+	background-color: #0cf;
+
+	box-shadow: 10px 14px 0 -2px rgba(255, 255, 255, .2), -14px 18px 0 -2px rgba(255, 255, 255, .2),
+	-22px -2px 0 rgba(255, 255, 255, .2);
+
+	transform: rotate(-28deg);
+	animation: rain 3s linear infinite;
+
+	content: '';
+}
+
+/* 定义动画 */
+@keyframes spin {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes lightning {
+	45% {
+		color: #fff;
+
+		opacity: .2;
+	}
+
+	50% {
+		color: #0cf;
+
+		opacity: 1;
+	}
+
+	55% {
+		color: #fff;
+
+		opacity: .2;
+	}
+}
+
+@keyframes rain {
+	0% {
+		background-color: #0cf;
+
+		box-shadow: 10px 14px 0 -2px rgba(255, 255, 255, .2), -14px 18px 0 -2px rgba(255, 255, 255, .2),
+		-22px -2px 0 #0cf;
+	}
+
+	25% {
+		box-shadow: 10px 14px 0 -2px rgba(255, 255, 255, .2), -14px 18px 0 -2px #0cf,
+		-22px -2px 0 rgba(255, 255, 255, .2);
+	}
+
+	50% {
+		background-color: rgba(255, 255, 255, .2);
+
+		box-shadow: 10px 14px 0 -2px #0cf, -14px 18px 0 -2px rgba(255, 255, 255, .2),
+		-22px -2px 0 rgba(255, 255, 255, .2);
+	}
+
+	100% {
+		box-shadow: 10px 14px 0 -2px rgba(255, 255, 255, .2), -14px 18px 0 -2px rgba(255, 255, 255, .2),
+		-22px -2px 0 #0cf;
+	}
+}
