@@ -8,3 +8,4 @@ CSS（HTML、JS） 样式练习与收集
 - 环形旋转加载（loading）
 - 3D 透视卡片，鼠标跟随（perspective）
 - 手风琴图片展示（accordion）
+- 天气（weather）
