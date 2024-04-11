@@ -1,0 +1,183 @@
+* {
+	/* 初始化 取消内外边距 */
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	/* 溢出隐藏 */
+	overflow: hidden;
+}
+
+.navbar {
+	display: flex;
+
+/* 相对定位 */
+
+	position: relative;
+
+/* 100%窗口宽度 */
+
+	width: 100vw;
+}
+
+.main {
+	display: flex;
+
+	position: relative;
+	top: 43px;
+
+	height: calc(100vh - 43px);
+
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+
+#checkbox {
+	display: none;
+}
+
+.navbar label {
+	position: absolute;
+	top: 0;
+	left: 70px;
+
+	border: 1px solid #d9dee4;
+	padding-left: 20px;
+	width: 100%;
+	height: 43px;
+
+	font-size: 30px;
+
+	color: #5a738e;
+	background-color: #ededed;
+
+/* 加个动画过渡 */
+
+	transition: all .5s ease-in-out;
+
+	cursor: pointer;
+}
+
+.navbar ul {
+	overflow: hidden;
+
+	list-style: none;
+
+	width: 70px;
+
+/* 100%窗口高度 */
+	height: 100vh;
+
+	background-color: #2a3f54;
+
+	transition: all .4s ease-in-out;
+}
+
+a,
+i {
+	transition: all .5s ease-in-out;
+}
+
+.navbar ul li {
+	margin-bottom: 10px;
+	height: 70px;
+}
+
+.navbar ul li:first-child {
+	display: flex;
+
+	padding: 0 10px;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar ul li:first-child img {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+
+.navbar ul li:first-child span {
+	/* 先把文字隐藏起来 */
+	display: none;
+
+	padding-left: 10px;
+
+/* 文字禁止换行 */
+
+	white-space: nowrap;
+
+	color: #fff;
+}
+
+.navbar ul li a {
+	display: flex;
+
+	width: 100%;
+	height: 100%;
+
+	text-decoration: none;
+
+	color: #d1d1d1;
+
+	justify-content: center;
+	align-items: center;
+
+/* 垂直排列 */
+	flex-direction: column;
+}
+
+.navbar ul li a i {
+	margin-bottom: 10px;
+
+	font-size: 25px;
+}
+
+.navbar ul li a span {
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+.navbar ul li a:hover {
+	color: #fff;
+	background-color: #35495d;
+}
+
+/* :checked选择器是判断复选框是否被选中 */
+/* +是相邻兄弟选择器，找到input的下一个兄弟label */
+.navbar input:checked + label {
+	left: 200px;
+}
+
+/* ~也是兄弟选择器，但它可以找到隔了几代的兄弟 */
+.navbar input:checked ~ ul {
+	width: 200px;
+}
+
+.navbar input:checked ~ ul li:first-child {
+	/* 将居中改为开头对齐 */
+	justify-content: flex-start;
+}
+
+.navbar input:checked ~ ul li:first-child span {
+	/* 文字显示 */
+	display: block;
+}
+
+.navbar input:checked ~ ul li a {
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.navbar input:checked ~ ul li a i {
+	margin: 0 15px 0 30px;
+
+	font-size: 18px;
+}
+
+.navbar input:checked ~ ul li a span {
+	font-size: 14px;
+}
