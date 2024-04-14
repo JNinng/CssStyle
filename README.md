@@ -13,3 +13,4 @@ CSS（HTML、JS） 样式练习与收集
 - 伸缩菜单栏（menu）
 - 后台管理侧边导航（admin）
 - 云朵按钮（cloud-button）
+- 环形线条加载（loading-loop）
