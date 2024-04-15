@@ -15,3 +15,4 @@ CSS（HTML、JS） 样式练习与收集
 - 云朵按钮（cloud-button）
 - 环形线条加载（loading-loop）
 - 文字时钟（word-clock）
+- 隐藏式侧边栏（hidden-sidebar）

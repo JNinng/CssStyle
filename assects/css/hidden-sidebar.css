@@ -1,0 +1,144 @@
+* {
+	/* 初始化 */
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	/* 100%窗口高度 */
+	height: 100vh;
+
+	background-color: #333;
+}
+
+.container {
+	overflow: hidden;
+
+/* 绝对固定定位 */
+
+	position: fixed;
+
+/* 垂直居中 */
+	top: 50%;
+	left: 0;
+
+/* 右上右下圆角 */
+
+	border-radius: 0 15px 15px 0;
+	width: 15px;
+	height: 600px;
+
+	background-color: #222;
+
+/* 动画过渡 */
+
+	transition: .3s;
+	transform: translateY(-50%);
+}
+
+.container:hover {
+	border-radius: 0 30px 30px 0;
+
+/* 鼠标移入，展开+改变圆角大小 */
+	width: 120px;
+}
+
+.container:hover li a {
+	/* 鼠标移入，改变字体颜色 */
+	color: #fff;
+}
+
+.container::before {
+	/* 绝对定位 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+
+	width: 60%;
+	height: 100%;
+
+	background-color: lightseagreen;
+
+	content: '';
+}
+
+.container .top {
+	margin-left: 30px;
+	border-radius: 0 0 0 26px;
+	width: calc(100% - 30px);
+	height: 20%;
+
+	background-color: #222;
+
+	transition: all .1s ease-in-out;
+}
+
+.container .middle {
+	margin-left: 40px;
+	border-radius: 20px;
+	width: calc(100% - 66px);
+	height: 10%;
+
+	background-color: lightseagreen;
+}
+
+.container .bottom {
+	margin-left: 30px;
+	border-radius: 26px 0 0 0;
+	width: calc(100% - 30px);
+	height: 100%;
+
+	background-color: #222;
+}
+
+.container li {
+	/* 弹性布局 水平垂直居中 */
+	display: flex;
+
+	position: absolute;
+
+/* 通过var函数调用自定义属性--t */
+	top: var(--t);
+
+	width: 100%;
+	height: 10%;
+
+	font-size: 30px;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.container li a {
+	/* 字体颜色透明 */
+	color: transparent;
+
+	transition: all .3s ease-in-out;
+}
+
+/* 分别为每一个li元素设置.top的高度 */
+/* ~是兄弟选择器 */
+.container li:nth-child(1):hover ~ .top {
+	height: 20%;
+}
+
+.container li:nth-child(2):hover ~ .top {
+	height: 30%;
+}
+
+.container li:nth-child(3):hover ~ .top {
+	height: 40%;
+}
+
+.container li:nth-child(4):hover ~ .top {
+	height: 50%;
+}
+
+.container li:nth-child(5):hover ~ .top {
+	height: 60%;
+}
+
+.container li:nth-child(6):hover ~ .top {
+	height: 70%;
+}
