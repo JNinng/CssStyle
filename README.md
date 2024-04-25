@@ -17,3 +17,4 @@ CSS（HTML、JS） 样式练习与收集
 - 文字时钟（word-clock）
 - 隐藏式侧边栏（hidden-sidebar）
 - 右键菜单（right-click-menu）
+- 全屏滚动贴合（rolling-adsorption）
