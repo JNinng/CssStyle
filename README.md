@@ -18,3 +18,4 @@ CSS（HTML、JS） 样式练习与收集
 - 隐藏式侧边栏（hidden-sidebar）
 - 右键菜单（right-click-menu）
 - 全屏滚动贴合（rolling-adsorption）
+- 文字聚光灯（word-projector-lamp）
