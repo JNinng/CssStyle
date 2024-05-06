@@ -1,6 +1,7 @@
 * {
 	/* 初始化 */
 	margin: 0;
+
 	padding: 0;
 }
 
@@ -12,35 +13,38 @@ body {
 }
 
 .container {
-	overflow: hidden;
-
-/* 绝对固定定位 */
-
+	/* 绝对固定定位 */
 	position: fixed;
 
-/* 垂直居中 */
+	/* 垂直居中 */
 	top: 50%;
+
 	left: 0;
 
-/* 右上右下圆角 */
+	overflow: hidden;
 
-	border-radius: 0 15px 15px 0;
 	width: 15px;
+
 	height: 600px;
 
-	background-color: #222;
+	/* 动画过渡 */
 
-/* 动画过渡 */
+	transition: 0.3s;
 
-	transition: .3s;
 	transform: translateY(-50%);
+
+	/* 右上右下圆角 */
+
+	border-radius: 0 15px 15px 0;
+
+	background-color: #222;
 }
 
 .container:hover {
-	border-radius: 0 30px 30px 0;
-
-/* 鼠标移入，展开+改变圆角大小 */
+	/* 鼠标移入，展开+改变圆角大小 */
 	width: 120px;
+
+	border-radius: 0 30px 30px 0;
 }
 
 .container:hover li a {
@@ -51,70 +55,87 @@ body {
 .container::before {
 	/* 绝对定位 */
 	position: absolute;
-	top: 0;
-	left: 0;
+
 	z-index: -1;
 
+	top: 0;
+
+	left: 0;
+
 	width: 60%;
+
 	height: 100%;
 
-	background-color: lightseagreen;
+	content: "";
 
-	content: '';
+	background-color: lightseagreen;
 }
 
 .container .top {
-	margin-left: 30px;
-	border-radius: 0 0 0 26px;
 	width: calc(100% - 30px);
+
 	height: 20%;
 
-	background-color: #222;
+	margin-left: 30px;
 
-	transition: all .1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+
+	border-radius: 0 0 0 26px;
+
+	background-color: #222;
 }
 
 .container .middle {
-	margin-left: 40px;
-	border-radius: 20px;
 	width: calc(100% - 66px);
+
 	height: 10%;
+
+	margin-left: 40px;
+
+	border-radius: 20px;
 
 	background-color: lightseagreen;
 }
 
 .container .bottom {
-	margin-left: 30px;
-	border-radius: 26px 0 0 0;
 	width: calc(100% - 30px);
+
 	height: 100%;
+
+	margin-left: 30px;
+
+	border-radius: 26px 0 0 0;
 
 	background-color: #222;
 }
 
 .container li {
-	/* 弹性布局 水平垂直居中 */
-	display: flex;
-
 	position: absolute;
 
-/* 通过var函数调用自定义属性--t */
+	/* 通过var函数调用自定义属性--t */
 	top: var(--t);
 
+	/* 弹性布局 水平垂直居中 */
+
+	display: flex;
+
+	align-items: center;
+
+	justify-content: center;
+
 	width: 100%;
+
 	height: 10%;
 
 	font-size: 30px;
-
-	justify-content: center;
-	align-items: center;
 }
 
 .container li a {
-	/* 字体颜色透明 */
-	color: transparent;
+	transition: all 0.3s ease-in-out;
 
-	transition: all .3s ease-in-out;
+	/* 字体颜色透明 */
+
+	color: transparent;
 }
 
 /* 分别为每一个li元素设置.top的高度 */

@@ -1,6 +1,7 @@
 * {
 	/* 初始化 取消内外边距 */
 	margin: 0;
+
 	padding: 0;
 }
 
@@ -10,28 +11,30 @@ body {
 }
 
 .navbar {
-	display: flex;
-
-/* 相对定位 */
-
+	/* 相对定位 */
 	position: relative;
 
-/* 100%窗口宽度 */
+	display: flex;
+
+	/* 100%窗口宽度 */
 
 	width: 100vw;
 }
 
 .main {
-	display: flex;
-
 	position: relative;
+
 	top: 43px;
 
-	height: calc(100vh - 43px);
+	display: flex;
+
+	align-items: center;
 
 	flex: 1;
+
 	justify-content: center;
-	align-items: center;
+
+	height: calc(100vh - 43px);
 }
 
 #checkbox {
@@ -40,64 +43,73 @@ body {
 
 .navbar label {
 	position: absolute;
+
 	top: 0;
+
 	left: 70px;
 
-	border: 1px solid #d9dee4;
-	padding-left: 20px;
 	width: 100%;
+
 	height: 43px;
 
-	font-size: 30px;
-
-	color: #5a738e;
-	background-color: #ededed;
-
-/* 加个动画过渡 */
-
-	transition: all .5s ease-in-out;
+	padding-left: 20px;
 
 	cursor: pointer;
+
+	/* 加个动画过渡 */
+	transition: all 0.5s ease-in-out;
+
+	color: #5a738e;
+
+	border: 1px solid #d9dee4;
+
+	background-color: #ededed;
+
+	font-size: 30px;
 }
 
 .navbar ul {
 	overflow: hidden;
 
-	list-style: none;
-
 	width: 70px;
 
-/* 100%窗口高度 */
+	/* 100%窗口高度 */
 	height: 100vh;
 
-	background-color: #2a3f54;
+	list-style: none;
 
-	transition: all .4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+
+	background-color: #2a3f54;
 }
 
 a,
 i {
-	transition: all .5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 
 .navbar ul li {
-	margin-bottom: 10px;
 	height: 70px;
+
+	margin-bottom: 10px;
 }
 
 .navbar ul li:first-child {
 	display: flex;
 
-	padding: 0 10px;
+	align-items: center;
 
 	justify-content: center;
-	align-items: center;
+
+	padding: 0 10px;
 }
 
 .navbar ul li:first-child img {
-	border-radius: 50%;
 	width: 50px;
+
 	height: 50px;
+
+	border-radius: 50%;
 }
 
 .navbar ul li:first-child span {
@@ -106,7 +118,7 @@ i {
 
 	padding-left: 10px;
 
-/* 文字禁止换行 */
+	/* 文字禁止换行 */
 
 	white-space: nowrap;
 
@@ -116,18 +128,20 @@ i {
 .navbar ul li a {
 	display: flex;
 
+	align-items: center;
+
+	/* 垂直排列 */
+	flex-direction: column;
+
+	justify-content: center;
+
 	width: 100%;
+
 	height: 100%;
 
 	text-decoration: none;
 
 	color: #d1d1d1;
-
-	justify-content: center;
-	align-items: center;
-
-/* 垂直排列 */
-	flex-direction: column;
 }
 
 .navbar ul li a i {
@@ -137,12 +151,14 @@ i {
 }
 
 .navbar ul li a span {
-	font-size: 12px;
 	white-space: nowrap;
+
+	font-size: 12px;
 }
 
 .navbar ul li a:hover {
 	color: #fff;
+
 	background-color: #35495d;
 }
 
@@ -169,6 +185,7 @@ i {
 
 .navbar input:checked ~ ul li a {
 	flex-direction: row;
+
 	justify-content: flex-start;
 }
 

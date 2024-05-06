@@ -1,58 +1,69 @@
 * {
 	margin: 0;
+
 	padding: 0;
 }
 
 body {
 	display: flex;
 
+	align-items: center;
+
+	justify-content: center;
+
 	height: 100vh;
 
 	background-color: #000;
-
-	justify-content: center;
-	align-items: center;
 }
 
 .loader {
 	position: relative;
 
-	border-radius: 50%;
 	width: 240px;
+
 	height: 240px;
 
-	background: linear-gradient(gold, transparent 40%);
-
 	animation: roll 1s linear infinite;
+
+	border-radius: 50%;
+
+	background: linear-gradient(gold, transparent 40%);
 }
 
 .loader::before {
 	position: absolute;
+
 	top: 50%;
+
 	left: 50%;
 
-	border-radius: 50%;
 	width: calc(100% - 20px);
+
 	height: calc(100% - 20px);
 
-	background-color: #000;
+	content: "";
 
 	transform: translate(-50%, -50%);
 
-	content: '';
+	border-radius: 50%;
+
+	background-color: #000;
 }
 
 .loader::after {
 	position: absolute;
+
 	z-index: -1;
 
-	border-radius: 50%;
 	width: 100%;
+
 	height: 100%;
 
-	background: linear-gradient(gold, transparent 40%);
+	content: "";
 
-	content: '';
+	border-radius: 50%;
+
+	background: linear-gradient(gold, transparent 40%);
 
 	filter: blur(30px);
 }
