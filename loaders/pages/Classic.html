@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Classis</title>
+
+		<style>
+			.container {
+				display: flex;
+
+				flex-direction: row;
+
+				flex-wrap: wrap;
+
+				gap: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="loader1">
+				<style>
+					.loader1 {
+						animation: l1 1s linear infinite alternate;
+
+						font-family: sans-serif;
+
+						font-size: 30px;
+
+						font-weight: bold;
+					}
+					.loader1:before {
+						content: "Loading1...";
+					}
+					@keyframes l1 {
+						to {
+							opacity: 0;
+						}
+					}
+				</style>
+			</div>
+			<div class="loader2">
+				<style>
+					.loader2 {
+						position: relative;
+
+						width: fit-content;
+
+						padding-bottom: 8px;
+
+						animation: l2 2s linear infinite;
+
+						background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+
+						font-family: sans-serif;
+
+						font-size: 30px;
+
+						font-weight: bold;
+					}
+					.loader2:before {
+						content: "Loading2...";
+					}
+					@keyframes l2 {
+						to {
+							background-size: 100% 4px;
+						}
+					}
+				</style>
+			</div>
+			<div class="loader2-2">
+				<style>
+					.loader2-2 {
+						position: relative;
+
+						width: fit-content;
+
+						padding-bottom: 8px;
+
+						background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+
+						font-family: sans-serif;
+
+						font-size: 30px;
+
+						font-weight: bold;
+					}
+					.loader2-2::before {
+						content: "Loading2-2...";
+					}
+					.loader2-2::after {
+						position: absolute;
+
+						bottom: 0;
+
+						left: 0;
+
+						width: 104px;
+
+						height: 4px;
+
+						content: "";
+
+						animation: l2-2 2s linear infinite;
+
+						background-color: black;
+					}
+					@keyframes l2-2 {
+						to {
+							width: 100%;
+						}
+					}
+				</style>
+			</div>
+			<div class="loader3">
+				<style>
+					.loader3 {
+						width: fit-content;
+
+						padding: 0 5px 8px 0;
+
+						animation: l3 2s steps(6) infinite;
+
+						background: repeating-linear-gradient(90deg, currentColor 0 8%, #0000 0 10%) 200% 100%/200%
+							3px no-repeat;
+
+						font-family: sans-serif;
+
+						font-size: 30px;
+
+						font-weight: bold;
+					}
+					.loader3:before {
+						content: "Loading3...";
+					}
+					@keyframes l3 {
+						to {
+							background-position: 80% 100%;
+						}
+					}
+				</style>
+			</div>
+			<div class="loader4">
+				<style>
+					.loader4 {
+						width: fit-content;
+
+						animation: l4 1s steps(4) infinite;
+
+						font-family: monospace;
+
+						font-size: 30px;
+
+						font-weight: bold;
+
+						clip-path: inset(0 3ch 0 0);
+					}
+					.loader4:before {
+						content: "Loading4...";
+					}
+					@keyframes l4 {
+						to {
+							clip-path: inset(0 -1ch 0 0);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader5">
+				<style>
+					.loader5 {
+						width: fit-content;
+
+						/* steps = word length */
+
+						animation: l5 2s steps(12) infinite;
+
+						font-family: monospace;
+
+						font-size: 30px;
+
+						font-weight: bold;
+
+						clip-path: inset(0 100% 0 0);
+					}
+					.loader5:before {
+						content: "Loading5...";
+					}
+					@keyframes l5 {
+						to {
+							clip-path: inset(0 -1ch 0 0);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader6">
+				<style>
+					.loader6 {
+						overflow: hidden;
+
+						width: fit-content;
+
+						animation: l6 2s linear infinite;
+
+						color: #00000000;
+
+						text-shadow: 0 0 var(--c), 11ch 0 var(--c);
+
+						font-family: monospace;
+
+						font-size: 30px;
+
+						font-weight: bold;
+
+						--c: #000;
+					}
+					.loader6:before {
+						content: "Loading6...";
+					}
+					@keyframes l6 {
+						to {
+							text-shadow: -11ch 0 var(--c), 0ch 0 var(--c);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader7">
+				<style>
+					.loader7 {
+						width: fit-content;
+
+						animation: l7 2s infinite steps(12);
+
+						color: #0000;
+
+						background: linear-gradient(90deg, #c02942 calc(50% + 0.5ch), #000 0) right/calc(200% + 1ch)
+							100%;
+
+						-webkit-background-clip: text;
+
+						background-clip: text;
+
+						font-family: monospace;
+
+						font-size: 30px;
+
+						font-weight: bold;
+					}
+					.loader7:before {
+						content: "Loading7...";
+					}
+					@keyframes l7 {
+						to {
+							background-position: left;
+						}
+					}
+				</style>
+			</div>
+		</div>
+	</body>
+</html>

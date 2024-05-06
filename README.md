@@ -19,3 +19,6 @@ CSS（HTML、JS） 样式练习与收集
 - 右键菜单（right-click-menu）
 - 全屏滚动贴合（rolling-adsorption）
 - 文字聚光灯（word-projector-lamp）
+
+## loader
+- Classic 1-7
