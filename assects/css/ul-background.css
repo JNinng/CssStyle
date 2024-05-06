@@ -1,5 +1,6 @@
 * {
 	margin: 0;
+
 	padding: 0;
 }
 
@@ -7,25 +8,28 @@
 	position: absolute;
 
 	width: 100%;
+
 	height: 100%;
 }
 
 ul.block {
 	display: flex;
 
-	list-style: none;
+	flex-direction: row;
 
-	margin: 0;
-	padding: 0;
 	height: 100%;
 
-	flex-direction: row;
+	margin: 0;
+
+	padding: 0;
+
+	list-style: none;
 }
 
 ul.block li {
-	overflow: hidden;
-
 	position: relative;
+
+	overflow: hidden;
 
 	flex: 1;
 }
@@ -36,70 +40,74 @@ ul.block:hover li::after {
 
 ul.block li::after {
 	position: absolute;
+
 	top: 0;
+
 	left: 0;
 
 	width: 100vw;
+
 	height: 100vh;
 
-	background-image: url(/assects/img/3.png);
-	background-size: cover;
+	content: "";
 
 	transition: all 1s ease-in-out;
 
-	content: '';
+	background-image: url(/assects/img/3.png);
+
+	background-size: cover;
 }
 
 ul.block li:nth-child(2)::after {
 	left: -100%;
 
-	transition-delay: .1s;
+	transition-delay: 0.1s;
 }
 
 ul.block li:nth-child(3)::after {
 	left: -200%;
 
-	transition-delay: .12s;
+	transition-delay: 0.12s;
 }
 
 ul.block li:nth-child(4)::after {
 	left: -300%;
 
-	transition-delay: .14s;
+	transition-delay: 0.14s;
 }
 
 ul.block li:nth-child(5)::after {
 	left: -400%;
 
-	transition-delay: .16s;
+	transition-delay: 0.16s;
 }
 
 ul.block li:nth-child(6)::after {
 	left: -500%;
 
-	transition-delay: .18s;
+	transition-delay: 0.18s;
 }
 
 ul.block li:nth-child(7)::after {
 	left: -600%;
 
-	transition-delay: .2s;
+	transition-delay: 0.2s;
 }
 
 ul.block li:nth-child(8)::after {
 	left: -700%;
 
-	transition-delay: .22s;
+	transition-delay: 0.22s;
 }
 
 ul.block li:nth-child(9)::after {
 	left: -800%;
 
-	transition-delay: .23s;
+	transition-delay: 0.23s;
 }
 
 ul.block li:nth-child(10)::after {
 	left: -900%;
 
-	transition-delay: .24s;
+	transition-delay: 0.24s;
 }

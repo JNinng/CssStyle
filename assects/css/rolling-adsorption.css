@@ -1,22 +1,24 @@
 * {
 	/* 初始化 */
 	margin: 0;
+
 	padding: 0;
 }
 
 .container {
 	overflow-x: hidden;
 
-/* 需要把滚动条设置到直接父容器，scroll-snap-type才能生效 */
+	/* 需要把滚动条设置到直接父容器，scroll-snap-type才能生效 */
 	/* 溢出时，垂直保留滚动条，水平隐藏 */
 	overflow-y: scroll;
 
-/* 100%窗口宽度和高度 */
+	/* 100%窗口宽度和高度 */
 
 	width: 100vw;
+
 	height: 100vh;
 
-/* display: flex; */
+	/* display: flex; */
 	/* 设置滚动贴合的方式：沿Y轴滚动 mandatory表示强制滚动 */
 
 	scroll-snap-type: y mandatory;
@@ -26,22 +28,25 @@
 	/* 弹性布局 居中 */
 	display: flex;
 
-/* 100%窗口宽度和高度 */
+	align-items: center;
+
+	justify-content: center;
+
+	/* 100%窗口宽度和高度 */
 
 	width: 100vw;
-	height: 100vh;
 
-	font-size: 200px;
+	height: 100vh;
 
 	color: #fff;
 
-/* 通过var函数调用自定义属性--c，设置各个div的背景颜色 */
+	/* 通过var函数调用自定义属性--c，设置各个div的背景颜色 */
 	background-color: var(--c);
 
-	justify-content: center;
-	align-items: center;
+	font-size: 200px;
 
-/* 设置下一页的内容会滚动贴合到顶部 */
+	/* 设置下一页的内容会滚动贴合到顶部 */
+
 	scroll-snap-align: start;
 
 	/* flex-shrink: 0; */

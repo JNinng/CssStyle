@@ -1,0 +1,73 @@
+* {
+	/* 初始化 取消页面元素内外边距 */
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	/* 弹性布局 水平、垂直居中 */
+	display: flex;
+
+	min-height: 100vh;
+
+	background-color: #222;
+
+	justify-content: center;
+	align-items: center;
+	/* background: linear-gradient(200deg,#485563,#29323c); */
+}
+
+h1 {
+	position: relative;
+
+	font-size: 112px;
+	text-transform: uppercase;
+
+	color: #333;
+}
+
+h1::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	color: transparent;
+	background: linear-gradient(
+		to right,
+		#ff69b3,
+		#fe0000,
+		#ffa401,
+		#ffff01,
+		#008102,
+		#40e1d2,
+		#410098,
+		#9400d4
+	);
+	-webkit-background-clip: text;
+
+	/* 以文字的范围来裁剪背景图片 */
+	background-clip: text;
+
+	animation: light 5s infinite;
+
+	content: "Hello World";
+
+	/* 将元素裁剪为一个圆形（100px表示圆的直径，0% 50%表示圆心位置） */
+
+	clip-path: circle(100px at 0% 50%);
+}
+
+/* 定义动画 改变圆心的位置 */
+@keyframes light {
+	0% {
+		clip-path: circle(100px at 0% 50%);
+	}
+
+	50% {
+		clip-path: circle(100px at 100% 50%);
+	}
+
+	100% {
+		clip-path: circle(100px at 0% 50%);
+	}
+}

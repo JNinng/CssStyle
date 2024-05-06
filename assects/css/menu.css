@@ -1,12 +1,13 @@
 * {
 	margin: 0;
+
 	padding: 0;
 }
 
 body {
 	height: 100vh;
 
-/* 背景渐变 */
+	/* 背景渐变 */
 
 	background: linear-gradient(200deg, #ddd6f3, #faaca8);
 }
@@ -17,53 +18,59 @@ body,
 .navbar ul {
 	display: flex;
 
-	justify-content: center;
 	align-items: center;
+
+	justify-content: center;
 }
 
 .navbar {
 	/* 相对定位 */
 	position: relative;
 
-	border-radius: 50px;
 	padding: 20px;
+
+	border-radius: 50px;
 
 	background-color: #fff;
 }
 
 .navbar input {
 	width: 40px;
+
 	height: 40px;
 
-/* 不透明度设置为0，直接变透明 */
-
-	opacity: 0;
-
-/* 鼠标变小手 */
+	/* 鼠标变小手 */
 
 	cursor: pointer;
+
+	/* 不透明度设置为0，直接变透明 */
+
+	opacity: 0;
 }
 
 .navbar span {
 	/* 绝对定位 */
 	position: absolute;
-/* 现将两条线都放到一起，然后单独设置第二条线的位置，calc方法可以自动计算数值 */
+
+	/* 现将两条线都放到一起，然后单独设置第二条线的位置，calc方法可以自动计算数值 */
 	top: calc(50% - 10px);
+
 	left: 25px;
 
-	border-radius: 15px;
 	width: 30px;
+
 	height: 4px;
 
-	background-color: #999;
+	/* 收回来的时候过渡刚好是相反的 */
 
-/* 收回来的时候过渡刚好是相反的 */
+	transition: transform 0.3s ease-in-out, top 0.3s ease-in-out 0.3s;
 
-	transition: transform .3s ease-in-out, top .3s ease-in-out .3s;
-
-/* 现在span覆盖着复选框，鼠标放到span上是点不中复选框的，这个属性就能解决这个问题，即便鼠标放到span上点击也能选中或取消选中复选框 */
-
+	/* 现在span覆盖着复选框，鼠标放到span上是点不中复选框的，这个属性就能解决这个问题，即便鼠标放到span上点击也能选中或取消选中复选框 */
 	pointer-events: none;
+
+	border-radius: 15px;
+
+	background-color: #999;
 }
 
 /* 因为第二条线在navbar这个元素内的第三个位置，所这里写3 */
@@ -72,34 +79,35 @@ body,
 }
 
 .navbar ul {
-/* 溢出隐藏 */
+	/* 溢出隐藏 */
 	overflow: hidden;
 
 	width: 0;
 
-/* 现在导航栏收起的时候，这个圆是扁的 */
+	/* 现在展开和收起速度太快了，加个过渡 */
+
+	transition: all 0.5s;
+
+	/* 现在导航栏收起的时候，这个圆是扁的 */
 	/* 这个问题是因为文字被换行显示了，两个汉字竖着排列了，所以盒子被撑大了，下面这个属性就可以解决这个问题，让文字不换行显示 */
-
 	white-space: nowrap;
-
-/* 现在展开和收起速度太快了，加个过渡 */
-
-	transition: all .5s;
 }
 
 .navbar ul li {
-	list-style: none;
-
 	margin: 0 15px;
+
+	list-style: none;
 }
 
 .navbar ul li a {
-	font-size: 20px;
-	font-weight: 700;
 	/* 取消下划线 */
 	text-decoration: none;
 
 	color: #333;
+
+	font-size: 20px;
+
+	font-weight: 700;
 }
 
 .navbar ul li a:hover {
@@ -114,19 +122,21 @@ body,
 .navbar input:checked ~ span:nth-child(2) {
 	top: calc(50% - 2px);
 
-	background-color: #fb7299;
+	/* 这里先执行top，然后0.3秒后执行transform */
 
-/* 这里先执行top，然后0.3秒后执行transform */
+	transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
 
-	transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
 	transform: rotate(-45deg);
+
+	background-color: #fb7299;
 }
 
 .navbar input:checked ~ span:nth-child(3) {
 	top: calc(50% - 2px);
 
-	background-color: #fb7299;
+	transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
 
-	transition: top .3s ease-in-out, transform .3s ease-in-out .3s;
 	transform: rotate(45deg);
+
+	background-color: #fb7299;
 }
