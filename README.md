@@ -21,4 +21,4 @@ CSS（HTML、JS） 样式练习与收集
 - 文字聚光灯（word-projector-lamp）
 
 ## loader
-- Classic 1-7
+- Classic 1-12
