@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dots</title>
+
+		<style>
+			.container {
+				display: flex;
+
+				flex-direction: row;
+				align-items: center;
+
+				flex-wrap: wrap;
+
+				gap: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="loader1">
+				<style>
+					.loader1 {
+						width: 60px;
+						aspect-ratio: 4;
+						background: radial-gradient(circle closest-side, #000 90%, #0000) 0 / calc(100% / 3) 100%
+							space;
+						clip-path: inset(0 100% 0 0);
+						animation: l1 1s steps(4) infinite;
+					}
+
+					@keyframes l1 {
+						to {
+							clip-path: inset(0 -34% 0 0);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader2">
+				<style>
+					.loader2 {
+						width: 60px;
+						aspect-ratio: 4;
+						background: radial-gradient(circle closest-side, #000 90%, #0000) 0 / calc(100% / 3) 100%
+							no-repeat;
+						animation: l2 1s steps(3) infinite;
+					}
+
+					@keyframes l2 {
+						to {
+							background-position: 150%;
+						}
+					}
+				</style>
+			</div>
+			<div class="loader3">
+				<style>
+					.loader3 {
+						width: 60px;
+						aspect-ratio: 2;
+						--_g: no-repeat radial-gradient(circle closest-side, #894f4f 90%, #00000000);
+						background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+						background-size: calc(100% / 3) 50%;
+						animation: l3 1s infinite linear;
+					}
+
+					@keyframes l3 {
+						20% {
+							background-position: 0% 0%, 50% 50%, 100% 50%;
+						}
+						40% {
+							background-position: 0% 100%, 50% 0%, 100% 50%;
+						}
+						60% {
+							background-position: 0% 50%, 50% 100%, 100% 0%;
+						}
+						80% {
+							background-position: 0% 50%, 50% 50%, 100% 100%;
+						}
+					}
+				</style>
+			</div>
+			<div style="display: flex; justify-content: center; align-items: center; width: 100px">
+				<div class="loader4">
+					<style>
+						.loader4 {
+							width: 60px;
+							aspect-ratio: 4;
+							--c: #000 90%, #0000;
+							background: radial-gradient(circle closest-side at left 6px top 50%, var(--c)),
+								radial-gradient(circle closest-side, var(--c)),
+								radial-gradient(circle closest-side at right 6px top 50%, var(--c));
+							background-size: 100% 100%;
+							background-repeat: no-repeat;
+							animation: l4 0.9s infinite alternate;
+						}
+						@keyframes l4 {
+							to {
+								width: 25px;
+								aspect-ratio: 0.98;
+							}
+						}
+					</style>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
