@@ -14,7 +14,7 @@
 
 				flex-wrap: wrap;
 
-				gap: 20px;
+				gap: 80px;
 			}
 		</style>
 	</head>
@@ -104,6 +104,57 @@
 						}
 					</style>
 				</div>
+			</div>
+			<div class="loader5">
+				<style>
+					.loader5 {
+						width: 15px;
+						aspect-ratio: 1;
+						border-radius: 50%;
+						animation: l5 1s infinite linear alternate;
+					}
+					@keyframes l5 {
+						0% {
+							box-shadow: 20px 0 #000, -20px 0 #0002;
+							background: #000;
+						}
+						33% {
+							box-shadow: 20px 0 #000, -20px 0 #0002;
+							background: #0002;
+						}
+						66% {
+							box-shadow: 20px 0 #0002, -20px 0 #000;
+							background: #0002;
+						}
+						100% {
+							box-shadow: 20px 0 #0002, -20px 0 #000;
+							background: #000;
+						}
+					}
+				</style>
+			</div>
+			<div class="loader6">
+				<style>
+					.loader6 {
+						width: 15px;
+						aspect-ratio: 1;
+						background: #000;
+						border-radius: 50%;
+						animation: l6 1s infinite linear alternate;
+					}
+
+					@keyframes l6 {
+						0% {
+							box-shadow: 15px 0, -25px 0;
+						}
+						50% {
+							box-shadow: 15px 0, -15px 0;
+						}
+						100% {
+							box-shadow: 25px 0, -15px 0;
+						}
+					}
+				</style>
 			</div>
 		</div>
 	</body>
