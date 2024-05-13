@@ -1487,6 +1487,117 @@
 					}
 				</style>
 			</div>
+			<div class="loader33">
+				<style>
+					.loader33 {
+						width: fit-content;
+						font-weight: bold;
+						font-family: monospace;
+						white-space: pre;
+						font-size: 30px;
+					}
+					.loader33:before {
+						content: "Loading...";
+						animation: l34 1s infinite alternate;
+					}
+
+					@keyframes l34 {
+						0%,
+						15%,
+						75%,
+						100% {
+							content: "Loading...";
+						}
+						20% {
+							content: "Loading...";
+						}
+						25% {
+							content: "Lo ding...";
+						}
+						30% {
+							content: "Load ng...";
+						}
+						35% {
+							content: " oading...";
+						}
+						40% {
+							content: "L ading...";
+						}
+						45% {
+							content: "Loadin ...";
+						}
+						50% {
+							content: "Loa ing...";
+						}
+						55% {
+							content: "Loading  .";
+						}
+						60% {
+							content: " oa ing...";
+						}
+						65% {
+							content: "L ading...";
+						}
+						70% {
+							content: "Load n ...";
+						}
+					}
+				</style>
+			</div>
+			<div class="loader34">
+				<style>
+					.loader34 {
+						font-weight: bold;
+						font-family: monospace;
+						display: inline-grid;
+						font-size: 30px;
+					}
+					.loader34:before,
+					.loader34:after {
+						content: "Loading...";
+						grid-area: 1/1;
+						-webkit-mask-size: 100% 5px, 100% 100%;
+						-webkit-mask-repeat: no-repeat;
+						-webkit-mask-composite: xor;
+						mask-composite: exclude;
+						animation: l35-1 1s infinite;
+					}
+					.loader34:before {
+						-webkit-mask-image: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+					}
+					.loader34:after {
+						-webkit-mask-image: linear-gradient(#000 0 0);
+						animation: l35-1 1s infinite, l35-2 0.2s infinite cubic-bezier(0.5, 200, 0.5, -200);
+					}
+
+					@keyframes l35-1 {
+						0% {
+							-webkit-mask-position: 0 20px, 0 0;
+						}
+						20% {
+							-webkit-mask-position: 0 8px, 0 0;
+						}
+						40% {
+							-webkit-mask-position: 0 100%, 0 0;
+						}
+						60% {
+							-webkit-mask-position: 0 3px, 0 0;
+						}
+						80% {
+							-webkit-mask-position: 0 15px, 0 0;
+						}
+						100% {
+							-webkit-mask-position: 0 0, 0 0;
+						}
+					}
+
+					@keyframes l35-2 {
+						100% {
+							transform: translate(0.1px);
+						}
+					}
+				</style>
+			</div>
 		</div>
 	</body>
 </html>

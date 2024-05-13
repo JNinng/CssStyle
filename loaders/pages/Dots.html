@@ -15,6 +15,7 @@
 				flex-wrap: wrap;
 
 				gap: 80px;
+				margin: 0 26px;
 			}
 		</style>
 	</head>
@@ -212,6 +213,90 @@
 					@keyframes l8-2 {
 						100% {
 							transform: rotate(-180deg) translateX(25px);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader9">
+				<style>
+					.loader9 {
+						width: 15px;
+						aspect-ratio: 1;
+						position: relative;
+						animation: l9-0 1.5s infinite steps(2);
+					}
+					.loader9::before,
+					.loader9::after {
+						content: "";
+						position: absolute;
+						inset: 0;
+						border-radius: 50%;
+						background: #000;
+					}
+					.loader9::before {
+						box-shadow: 26px 0;
+						transform: translateX(-26px);
+						animation: l9-1 0.75s infinite linear alternate;
+					}
+					.loader9::after {
+						transform: translateX(13px) rotate(0deg) translateX(13px);
+						animation: l9-2 0.75s infinite linear alternate;
+					}
+
+					@keyframes l9-0 {
+						0%,
+						49.9% {
+							transform: scale(1);
+						}
+						50%,
+						100% {
+							transform: scale(-1);
+						}
+					}
+					@keyframes l9-1 {
+						100% {
+							box-shadow: 52px 0;
+						}
+					}
+					@keyframes l9-2 {
+						100% {
+							transform: translateX(13px) rotate(-180deg) translateX(13px);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader10">
+				<style>
+					.loader10 {
+						width: 15px;
+						aspect-ratio: 1;
+						position: relative;
+					}
+					.loader10::before,
+					.loader10::after {
+						content: "";
+						position: absolute;
+						inset: 0;
+						border-radius: 50%;
+						background: #000;
+					}
+					.loader10::before {
+						box-shadow: -26px 0;
+						animation: l10-1 1.5s infinite linear;
+					}
+					.loader10::after {
+						transform: rotate(0deg) translateX(26px);
+						animation: l10-2 1.5s infinite linear;
+					}
+
+					@keyframes l10-1 {
+						50% {
+							transform: translateX(26px);
+						}
+					}
+					@keyframes l10-2 {
+						100% {
+							transform: rotate(-360deg) translateX(26px);
 						}
 					}
 				</style>
