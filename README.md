@@ -22,4 +22,4 @@ CSS（HTML、JS） 样式练习与收集
 
 ## loader
 - Classic 1-35
-- Dots 1-17
+- Dots 1-20

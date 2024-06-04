@@ -515,6 +515,88 @@
 					}
 				</style>
 			</div>
+			<div class="loader18">
+				<style>
+					.loader18 {
+						width: 15px;
+						aspect-ratio: 1;
+						border-radius: 50%;
+						background: #000;
+						box-shadow: -20px 0px, 20px 0px;
+						animation: l18 1s infinite;
+					}
+					@keyframes l18 {
+						25% {
+							box-shadow: -20px -20px, 20px 20px;
+						}
+						50% {
+							box-shadow: 0px -20px, 0px 20px;
+						}
+						75% {
+							box-shadow: 20px -20px, -20px 20px;
+						}
+						100% {
+							box-shadow: 20px 0px, -20px 0px;
+						}
+					}
+				</style>
+			</div>
+			<div class="loader19">
+				<style>
+					.loader19 {
+						width: 15px;
+						aspect-ratio: 1;
+						border-radius: 50%;
+						clip-path: inset(-45px);
+						box-shadow: -60px 15px, -60px 15px, -60px 15px;
+						transform: translateY(-15px);
+						animation: l19 1s infinite linear;
+					}
+					@keyframes l19 {
+						16.67% {
+							box-shadow: -60px 15px, -60px 15px, 19px 15px;
+						}
+						33.33% {
+							box-shadow: -60px 15px, 0px 15px, 19px 15px;
+						}
+						40%,
+						60% {
+							box-shadow: -19px 15px, 0px 15px, 19px 15px;
+						}
+						66.67% {
+							box-shadow: -19px 15px, 0px 15px, 60px 15px;
+						}
+						83.33% {
+							box-shadow: -19px 15px, 60px 15px, 60px 15px;
+						}
+						100% {
+							box-shadow: 60px 15px, 60px 15px, 60px 15px;
+						}
+					}
+				</style>
+			</div>
+			<div class="loader20">
+				<style>
+					.loader20 {
+						color: #000;
+						width: 4px;
+						aspect-ratio: 1;
+						border-radius: 50%;
+						box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+						transform: translateX(-38px);
+						animation: l21 0.5s infinite alternate linear;
+					}
+
+					@keyframes l21 {
+						50% {
+							box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px;
+						}
+						100% {
+							box-shadow: 19px 0 0 0, 38px 0 0 3px, 57px 0 0 7px;
+						}
+					}
+				</style>
+			</div>
 		</div>
 	</body>
 </html>
