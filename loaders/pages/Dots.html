@@ -996,6 +996,68 @@
 					}
 				</style>
 			</div>
+			<div class="loader31">
+				<style>
+					.loader31 {
+						height: 15px;
+						aspect-ratio: 4;
+						display: grid;
+						animation: l31-0 1s infinite;
+					}
+					.loader31:before,
+					.loader31:after {
+						content: "";
+						grid-area: 1/1;
+						--_g: no-repeat radial-gradient(farthest-side, #000 94%, #0000);
+						background: var(--_g) left, var(--_g) right;
+						background-size: 25% 100%;
+					}
+					.loader31:after {
+						transform: rotate(0) translate(37.5%) rotate(0);
+						animation: inherit;
+						animation-name: l31-1;
+					}
+					@keyframes l31-0 {
+						100% {
+							transform: translate(37.5%);
+						}
+					}
+					@keyframes l31-1 {
+						100% {
+							transform: rotate(-0.5turn) translate(37.5%) rotate(0.5turn);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader32">
+				<style>
+					.loader32 {
+						height: 15px;
+						aspect-ratio: 5;
+						display: grid;
+						--_g: no-repeat radial-gradient(farthest-side, #000 94%, #0000);
+					}
+					.loader32:before,
+					.loader32:after {
+						content: "";
+						grid-area: 1/1;
+						background: var(--_g) left, var(--_g) right;
+						background-size: 20% 100%;
+						animation: l32 1s infinite;
+					}
+					.loader32:after {
+						background: var(--_g) calc(1 * 100% / 3), var(--_g) calc(2 * 100% / 3);
+						background-size: 20% 100%;
+						animation-direction: reverse;
+					}
+					@keyframes l32 {
+						80%,
+						100% {
+							transform: rotate(0.5turn);
+						}
+					}
+				</style>
+			</div>
 		</div>
 	</body>
 </html>
