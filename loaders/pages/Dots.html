@@ -1058,6 +1058,108 @@
 					}
 				</style>
 			</div>
+			<div class="loader33">
+				<style>
+					.loader33 {
+						height: 15px;
+						aspect-ratio: 5;
+						display: flex;
+						justify-content: space-between;
+					}
+					.loader33:before,
+					.loader33:after {
+						content: "";
+						width: calc(140% / 3);
+						--_g: no-repeat radial-gradient(farthest-side, #000 94%, #0000);
+						background: var(--_g) left, var(--_g) right;
+						background-size: calc(300% / 7) 100%;
+						transform-origin: calc(300% / 14) 50%;
+						transform: translate(0) rotate(0);
+						animation: l33 1s infinite linear;
+					}
+					.loader33:after {
+						--s: -1;
+						transform-origin: calc(100% - calc(300% / 14)) 50%;
+					}
+					@keyframes l33 {
+						100% {
+							transform: translate(calc(var(--s, 1) * (100% - calc(300% / 7))))
+								rotate(calc(var(--s, 1) * 0.5turn));
+						}
+					}
+				</style>
+			</div>
+			<div class="loader34">
+				<style>
+					.loader34 {
+						height: 15px;
+						aspect-ratio: 4;
+						display: grid;
+					}
+					.loader34:before,
+					.loader34:after {
+						content: "";
+						grid-area: 1/1;
+						--_g: no-repeat radial-gradient(farthest-side, #000 94%, #0000);
+						background: var(--_g) left, var(--_g) right;
+						background-size: 25% 100%;
+						animation: l34 1s infinite;
+						transform: translate(var(--d, 0)) rotate(0);
+					}
+					.loader34:after {
+						--d: 37.5%;
+						animation-delay: 0.5s;
+					}
+					@keyframes l34 {
+						50%,
+						100% {
+							transform: translate(var(--d, 0)) rotate(0.5turn);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader35">
+				<style>
+					.loader35 {
+						height: 15px;
+						aspect-ratio: 5;
+						display: grid;
+					}
+					.loader35:before,
+					.loader35:after {
+						content: "";
+						grid-area: 1/1;
+						height: inherit;
+						--_g: no-repeat radial-gradient(farthest-side, #000 94%, #0000);
+						background: var(--_g) left, var(--_g) right;
+						background-size: 15px 100%;
+						background-repeat: no-repeat;
+						animation: l35 1s infinite linear;
+					}
+					.loader35:after {
+						margin-left: auto;
+						--s: -1;
+					}
+					@keyframes l35 {
+						0% {
+							transform: translateY(calc(var(--s, 1) * 0px));
+							aspect-ratio: 2.3;
+						}
+						33% {
+							transform: translateY(calc(var(--s, 1) * 8px));
+							aspect-ratio: 2.3;
+						}
+						66% {
+							transform: translateY(calc(var(--s, 1) * 8px));
+							aspect-ratio: 3.7;
+						}
+						100% {
+							transform: translateY(calc(var(--s, 1) * 0px));
+							aspect-ratio: 3.7;
+						}
+					}
+				</style>
+			</div>
 		</div>
 	</body>
 </html>
