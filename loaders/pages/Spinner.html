@@ -164,6 +164,139 @@
 					}
 				</style>
 			</div>
+			<div class="loader8">
+				<style>
+					.loader8 {
+						width: 50px;
+						aspect-ratio: 1;
+						color: #f03355;
+						--_c: no-repeat radial-gradient(farthest-side, currentColor 92%, #0000);
+						background: var(--_c) 50% 0 /12px 12px, var(--_c) 50% 100%/12px 12px,
+							var(--_c) 100% 50%/12px 12px, var(--_c) 0 50%/12px 12px, var(--_c) 50% 50%/12px 12px,
+							conic-gradient(from 90deg at 4px 4px, #0000 90deg, currentColor 0) -4px -4px /
+								calc(50% + 2px) calc(50% + 2px);
+						animation: l8 1s infinite linear;
+					}
+					@keyframes l8 {
+						to {
+							transform: rotate(0.5turn);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader9">
+				<style>
+					.loader9 {
+						width: 50px;
+						aspect-ratio: 1;
+						border-radius: 50%;
+						background: radial-gradient(farthest-side, #f03355 95%, #0000) 50% 1px/12px 12px no-repeat,
+							radial-gradient(farthest-side, #0000 calc(100% - 14px), #ccc 0);
+						animation: l9 2s infinite linear;
+					}
+					@keyframes l9 {
+						to {
+							transform: rotate(1turn);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader10">
+				<style>
+					.loader10 {
+						width: 50px;
+						aspect-ratio: 1;
+						color: #854f1d;
+						border-radius: 50%;
+						display: grid;
+						background: conic-gradient(from 90deg at 4px 4px, #0000 90deg, currentColor 0) -4px -4px /
+								calc(50% + 2px) calc(50% + 2px),
+							radial-gradient(
+									farthest-side,
+									currentColor 6px,
+									#0000 7px calc(100% - 6px),
+									currentColor calc(100% - 5px)
+								)
+								no-repeat;
+						animation: l10 2s infinite linear;
+						position: relative;
+					}
+					.loader:before {
+						content: "";
+						border-radius: inherit;
+						background: inherit;
+						transform: rotate(45deg);
+					}
+					@keyframes l10 {
+						to {
+							transform: rotate(0.5turn);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader11">
+				<style>
+					.loader11 {
+						width: 50px;
+						aspect-ratio: 1;
+						border-radius: 50%;
+						padding: 6px;
+						background: conic-gradient(from 135deg at top, currentColor 90deg, #0000 0) 0
+								calc(50% - 4px) / 17px 8.5px,
+							radial-gradient(
+									farthest-side at bottom left,
+									#0000 calc(100% - 6px),
+									currentColor calc(100% - 5px) 99%,
+									#0000
+								)
+								top right/50% 50% content-box content-box,
+							radial-gradient(
+									farthest-side at top,
+									#0000 calc(100% - 6px),
+									currentColor calc(100% - 5px) 99%,
+									#0000
+								)
+								bottom / 100% 50% content-box content-box;
+						background-repeat: no-repeat;
+						animation: l11 1s infinite linear;
+					}
+					@keyframes l11 {
+						100% {
+							transform: rotate(1turn);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader12">
+				<style>
+					.loader12 {
+						width: 50px;
+						aspect-ratio: 1;
+						display: grid;
+					}
+					.loader12::before,
+					.loader12::after {
+						content: "";
+						grid-area: 1/1;
+						--c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+						background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+						background-size: 12px 12px;
+						animation: l12 1s infinite;
+					}
+					.loader12::before {
+						margin: 4px;
+						filter: hue-rotate(45deg);
+						background-size: 8px 8px;
+						animation-timing-function: linear;
+					}
+
+					@keyframes l12 {
+						100% {
+							transform: rotate(0.5turn);
+						}
+					}
+				</style>
+			</div>
 		</div>
 	</body>
 </html>
