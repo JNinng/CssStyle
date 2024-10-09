@@ -375,6 +375,72 @@
 					}
 				</style>
 			</div>
+			<div class="loader16">
+				<style>
+					.loader16 {
+						width: 50px;
+						aspect-ratio: 1;
+						display: grid;
+						border: 4px solid #0000;
+						border-radius: 50%;
+						border-color: #ccc #0000;
+						animation: l16 1s infinite linear;
+					}
+					.loader16::before,
+					.loader16::after {
+						content: "";
+						grid-area: 1/1;
+						margin: 2px;
+						border: inherit;
+						border-radius: 50%;
+					}
+					.loader16::before {
+						border-color: #f03355 #0000;
+						animation: inherit;
+						animation-duration: 0.5s;
+						animation-direction: reverse;
+					}
+					.loader16::after {
+						margin: 8px;
+					}
+					@keyframes l16 {
+						100% {
+							transform: rotate(1turn);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader17">
+				<style>
+					.loader17 {
+						width: 70px;
+						aspect-ratio: 1;
+						background: radial-gradient(farthest-side, #ffa516 90%, #0000) center/16px 16px,
+							radial-gradient(farthest-side, green 90%, #0000) bottom/12px 12px;
+						background-repeat: no-repeat;
+						animation: l17 1s infinite linear;
+						position: relative;
+					}
+					.loader17::before {
+						content: "";
+						position: absolute;
+						width: 8px;
+						aspect-ratio: 1;
+						inset: auto 0 16px;
+						margin: auto;
+						background: #ccc;
+						border-radius: 50%;
+						transform-origin: 50% calc(100% + 10px);
+						animation: inherit;
+						animation-duration: 0.5s;
+					}
+					@keyframes l17 {
+						100% {
+							transform: rotate(1turn);
+						}
+					}
+				</style>
+			</div>
 		</div>
 	</body>
 </html>
