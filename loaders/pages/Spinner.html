@@ -441,6 +441,129 @@
 					}
 				</style>
 			</div>
+			<div class="loader18">
+				<style>
+					.loader18 {
+						width: 50px;
+						aspect-ratio: 1;
+						--c: no-repeat radial-gradient(farthest-side, #514b82 92%, #0000);
+						background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+						background-size: 10px 10px;
+						animation: l18 1s infinite;
+						position: relative;
+					}
+					.loader18::before {
+						content: "";
+						position: absolute;
+						inset: 0;
+						margin: 3px;
+						background: repeating-conic-gradient(#0000 0 35deg, #514b82 0 90deg);
+						-webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 3px), #000 0);
+						border-radius: 50%;
+					}
+					@keyframes l18 {
+						100% {
+							transform: rotate(0.5turn);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader19">
+				<style>
+					.loader19 {
+						width: 50px;
+						aspect-ratio: 1;
+						display: grid;
+						color: #854f1d;
+						background: radial-gradient(
+							farthest-side,
+							currentColor calc(100% - 6px),
+							#0000 calc(100% - 5px) 0
+						);
+						-webkit-mask: radial-gradient(
+							farthest-side,
+							#0000 calc(100% - 13px),
+							#000 calc(100% - 12px)
+						);
+						border-radius: 50%;
+						animation: l19 2s infinite linear;
+					}
+					.loader19::before,
+					.loader19::after {
+						content: "";
+						grid-area: 1/1;
+						background: linear-gradient(currentColor 0 0) center,
+							linear-gradient(currentColor 0 0) center;
+						background-size: 100% 10px, 10px 100%;
+						background-repeat: no-repeat;
+					}
+					.loader19::after {
+						transform: rotate(45deg);
+					}
+
+					@keyframes l19 {
+						100% {
+							transform: rotate(1turn);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader20">
+				<style>
+					.loader20 {
+						width: 50px;
+						aspect-ratio: 1;
+						border-radius: 50%;
+						border: 8px solid #514b82;
+						animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
+					}
+					@keyframes l20-1 {
+						0% {
+							clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+						}
+						12.5% {
+							clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+						}
+						25% {
+							clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);
+						}
+						50% {
+							clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+						}
+						62.5% {
+							clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+						}
+						75% {
+							clip-path: polygon(
+								50% 50%,
+								100% 100%,
+								100% 100%,
+								100% 100%,
+								100% 100%,
+								50% 100%,
+								0% 100%
+							);
+						}
+						100% {
+							clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);
+						}
+					}
+					@keyframes l20-2 {
+						0% {
+							transform: scaleY(1) rotate(0deg);
+						}
+						49.99% {
+							transform: scaleY(1) rotate(135deg);
+						}
+						50% {
+							transform: scaleY(-1) rotate(0deg);
+						}
+						100% {
+							transform: scaleY(-1) rotate(-135deg);
+						}
+					}
+				</style>
+			</div>
 		</div>
 	</body>
 </html>
