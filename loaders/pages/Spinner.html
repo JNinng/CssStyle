@@ -564,6 +564,51 @@
 					}
 				</style>
 			</div>
+			<div class="loader21">
+				<style>
+					.loader21 {
+						width: 50px;
+						aspect-ratio: 1;
+						border-radius: 50%;
+						background: repeating-conic-gradient(#000 0 90deg, #ccc 0 180deg);
+						animation: l21 1s infinite linear;
+					}
+					@keyframes l21 {
+						100% {
+							transform: rotate(0.5turn);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader22">
+				<style>
+					.loader22 {
+					  width: 50px;
+					  aspect-ratio: 1;
+					  display: grid;
+					  border-radius: 50%;
+					  background: conic-gradient(#25b09b 25%,#f03355 0 50%,#514b82 0 75%,#ffa516 0);
+					  animation: l22 2s infinite linear;
+					}
+					.loader22::before,
+					.loader22::after {
+					   content: "";
+					   grid-area: 1/1;
+					   margin: 15%;
+					   border-radius: 50%;
+					   background: inherit;
+					   animation: inherit;
+					}
+					.loader22::after {
+					   margin: 25%;
+					   animation-duration: 3s;
+					}
+					@keyframes l22 {
+					  100% {transform: rotate(1turn)}
+					}
+					}
+				</style>
+			</div>
 		</div>
 	</body>
 </html>
