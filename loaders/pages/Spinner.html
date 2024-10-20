@@ -643,6 +643,88 @@
 					}
 				</style>
 			</div>
+			<div class="loader24">
+				<style>
+					.loader24 {
+						width: 50px;
+						aspect-ratio: 1;
+						border-radius: 50%;
+						border: 8px solid #0000;
+						border-right-color: #ffa50097;
+						position: relative;
+						animation: l24 1s infinite linear;
+					}
+					.loader24:before,
+					.loader24:after {
+						content: "";
+						position: absolute;
+						inset: -8px;
+						border-radius: 50%;
+						border: inherit;
+						animation: inherit;
+						animation-duration: 2s;
+					}
+					.loader24:after {
+						animation-duration: 4s;
+					}
+					@keyframes l24 {
+						100% {
+							transform: rotate(1turn);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader25">
+				<style>
+					.loader25 {
+						width: 50px;
+						aspect-ratio: 1;
+						border-radius: 50%;
+						background: #514b82;
+						-webkit-mask: radial-gradient(circle closest-side at 50% 40%, #0000 94%, #000);
+						transform-origin: 50% 40%;
+						animation: l25 1s infinite linear;
+					}
+					@keyframes l25 {
+						100% {
+							transform: rotate(1turn);
+						}
+					}
+				</style>
+			</div>
+			<div class="loader26">
+				<style>
+					.loader26 {
+						width: 50px;
+						aspect-ratio: 1;
+						display: grid;
+						-webkit-mask: conic-gradient(from 15deg, #0000, #000);
+						animation: l26 1s infinite steps(12);
+					}
+					.loader26,
+					.loader26:before,
+					.loader26:after {
+						background: radial-gradient(closest-side at 50% 12.5%, #f03355 96%, #0000) 50% 0/20% 80%
+								repeat-y,
+							radial-gradient(closest-side at 12.5% 50%, #f03355 96%, #0000) 0 50%/80% 20% repeat-x;
+					}
+					.loader26:before,
+					.loader26:after {
+						content: "";
+						grid-area: 1/1;
+						transform: rotate(30deg);
+					}
+					.loader26:after {
+						transform: rotate(60deg);
+					}
+
+					@keyframes l26 {
+						100% {
+							transform: rotate(1turn);
+						}
+					}
+				</style>
+			</div>
 		</div>
 	</body>
 </html>
