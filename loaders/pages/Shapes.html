@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Shapes</title>
+
+	<style>
+		.container {
+			display: flex;
+
+			flex-direction: row;
+			align-items: center;
+
+			flex-wrap: wrap;
+
+			gap: 80px;
+			margin: 26px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="loader1">
+			<style>
+				.loader1 {
+					width: 40px;
+					aspect-ratio: 1;
+					border-radius: 50%;
+					background: #f03355;
+					clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+					animation: l1 2s infinite cubic-bezier(0.3, 1, 0, 1);
+				}
+
+				@keyframes l1 {
+					33% {
+						border-radius: 0;
+						background: #514b82;
+						clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+					}
+
+					66% {
+						border-radius: 0;
+						background: #ffa516;
+						clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
+					}
+				}
+			</style>
+		</div>
+		<div class="loader2">
+			<style>
+				.loader2 {
+					width: 40px;
+					aspect-ratio: 1;
+					background: #25b09b;
+					clip-path: polygon(0 0, 100% 0, 100% 100%);
+					animation: l2 2s infinite cubic-bezier(0.3, 1, 0, 1);
+				}
+
+				@keyframes l2 {
+					25% {
+						clip-path: polygon(0 0, 100% 0, 0 100%);
+					}
+
+					50% {
+						clip-path: polygon(0 0, 100% 100%, 0 100%);
+					}
+
+					75% {
+						clip-path: polygon(100% 0, 100% 100%, 0 100%);
+					}
+
+					100% {
+						clip-path: polygon(100% 0, 100% 100%, 0 0);
+					}
+				}
+			</style>
+		</div>
+		<div style="height: 60px; display: flex; align-items: center; justify-content: center;">
+			<div class="loader3">
+				<style>
+					.loader3 {
+						width: 50px;
+						height: 50px;
+						display: flex;
+						transform: rotate(45deg);
+						animation: l3-0 1.5s infinite linear;
+					}
+
+					.loader3:before,
+					.loader3:after {
+						content: "";
+						width: 50%;
+						background: #514b82;
+						clip-path: polygon(0 50%, 100% 0, 100% 100%);
+						animation: inherit;
+						animation-name: l3-1;
+					}
+
+					.loader3:after {
+						clip-path: polygon(0 0, 100% 50%, 0% 100%);
+						animation-name: l3-2;
+					}
+
+					@keyframes l3-0 {
+						25% {
+							width: 50px;
+							height: 50px;
+							transform: rotate(0);
+						}
+
+						50% {
+							width: 50px;
+							height: 50px;
+						}
+
+						75% {
+							width: 70.7px;
+							height: 35.35px;
+						}
+
+						100% {
+							width: 70.7px;
+							height: 35.35px;
+							transform: rotate(0);
+						}
+					}
+
+					@keyframes l3-1 {
+
+						0%,
+						25% {
+							clip-path: polygon(0 50%, 100% 0, 100% 100%);
+							transform: translate(0.3px);
+						}
+
+						50% {
+							clip-path: polygon(0 50%, 100% 0, 100% 100%);
+							transform: translate(-5px);
+						}
+
+						75% {
+							clip-path: polygon(0 100%, 0 0, 100% 100%);
+							transform: translate(-5px);
+						}
+
+						100% {
+							clip-path: polygon(0 100%, 0 0, 100% 100%);
+							transform: translate(17.7px);
+						}
+					}
+
+					@keyframes l3-2 {
+
+						0%,
+						25% {
+							clip-path: polygon(0 0, 100% 50%, 0 100%);
+							transform: translate(-0.3px);
+						}
+
+						50% {
+							clip-path: polygon(0 0, 100% 50%, 0 100%);
+							transform: translate(5px);
+						}
+
+						75% {
+							clip-path: polygon(0 0, 100% 0, 100% 100%);
+							transform: translate(5px);
+						}
+
+						100% {
+							clip-path: polygon(0 0, 100% 0, 100% 100%);
+							transform: translate(-17.7px);
+						}
+					}
+				</style>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
