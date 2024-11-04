@@ -400,6 +400,132 @@
 				}
 			</style>
 		</div>
+		<div class="loader9">
+			<style>
+				.loader9 {
+					width: 40px;
+					height: 20px;
+					background: orange;
+					position: relative;
+					animation: l9-0 1.5s infinite linear;
+				}
+
+				.loader9:before,
+				.loader9:after {
+					content: "";
+					position: absolute;
+					background: inherit;
+					bottom: 100%;
+					width: 50%;
+					height: 100%;
+					animation: inherit;
+					animation-name: l9-1;
+				}
+
+				.loader9:before {
+					left: 0;
+					transform-origin: bottom left;
+					--s: -1;
+				}
+
+				.loader9:after {
+					right: 0;
+					transform-origin: bottom right;
+				}
+
+				@keyframes l9-0 {
+
+					0%,
+					10% {
+						transform: translateY(0%) scaleY(1)
+					}
+
+					49.99% {
+						transform: translateY(-50%) scaleY(1)
+					}
+
+					50% {
+						transform: translateY(-50%) scaleY(-1)
+					}
+
+					90%,
+					100% {
+						transform: translateY(-100%) scaleY(-1)
+					}
+				}
+
+				@keyframes l9-1 {
+
+					10%,
+					90% {
+						transform: rotate(0deg)
+					}
+
+					50% {
+						transform: rotate(calc(var(--s, 1)*180deg))
+					}
+				}
+			</style>
+		</div>
+		<div class="loader10">
+			<style>
+				.loader10 {
+					display: flex;
+					width: 50px;
+					aspect-ratio: 1;
+					animation: l10-0 1.5s infinite linear;
+				}
+
+				.loader10:before,
+				.loader10:after {
+					content: "";
+					width: 50%;
+					background: #514b82;
+					clip-path: polygon(0 0, 100% 50%, 0% 100%);
+					animation: inherit;
+					animation-name: l10-1;
+					transform-origin: bottom left;
+				}
+
+				.loader10:before {
+					clip-path: polygon(0 50%, 100% 0, 100% 100%);
+					transform-origin: bottom right;
+					--s: -1;
+				}
+
+				@keyframes l10-0 {
+
+					0%,
+					34.99% {
+						transform: scaley(1)
+					}
+
+					35%,
+					70% {
+						transform: scaley(-1)
+					}
+
+					90%,
+					100% {
+						transform: scaley(-1) rotate(180deg)
+					}
+				}
+
+				@keyframes l10-1 {
+
+					0%,
+					10%,
+					70%,
+					100% {
+						transform: translateY(-100%) rotate(calc(var(--s, 1)*135deg))
+					}
+
+					35% {
+						transform: translateY(0%) rotate(0deg)
+					}
+				}
+			</style>
+		</div>
 	</div>
 </body>
 
