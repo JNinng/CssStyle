@@ -714,6 +714,108 @@
 				}
 			</style>
 		</div>
+		<div class="loader15">
+			<style>
+				.loader15 {
+					width: 40px;
+					aspect-ratio: 1;
+					display: flex;
+					transform-origin: 50% 125%;
+					animation: l15-0 1.5s infinite linear;
+				}
+
+				.loader15:before,
+				.loader15:after {
+					content: "";
+					flex: 1;
+					background: orange;
+					animation: inherit;
+					transform-origin: bottom left;
+					animation-name: l15-1;
+				}
+
+				.loader15:before {
+					transform-origin: bottom right;
+					--s: -1;
+				}
+
+				@keyframes l15-0 {
+
+					0%,
+					10% {
+						transform: translateY(0) scaleY(1)
+					}
+
+					49.99% {
+						transform: translateY(-75%) scaleY(1)
+					}
+
+					50% {
+						transform: translateY(-75%) scaleY(-1)
+					}
+
+					90%,
+					100% {
+						transform: translateY(-150%) scaleY(-1)
+					}
+				}
+
+				@keyframes l15-1 {
+
+					10%,
+					90% {
+						transform: rotate(0deg)
+					}
+
+					50% {
+						transform: rotate(calc(var(--s, 1)*90deg))
+					}
+				}
+			</style>
+		</div>
+		<div class="loader16">
+			<style>
+				.loader16 {
+					width: 40px;
+					height: 40px;
+					position: relative;
+					--c: no-repeat linear-gradient(#25b09b 0 0);
+					background:
+						var(--c) center/100% 10px,
+						var(--c) center/10px 100%;
+				}
+
+				.loader16:before {
+					content: '';
+					position: absolute;
+					inset: 0;
+					background:
+						var(--c) 0 0,
+						var(--c) 100% 0,
+						var(--c) 0 100%,
+						var(--c) 100% 100%;
+					background-size: 15.5px 15.5px;
+					animation: l16 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+				}
+
+				@keyframes l16 {
+					33% {
+						inset: -10px;
+						transform: rotate(0deg)
+					}
+
+					66% {
+						inset: -10px;
+						transform: rotate(90deg)
+					}
+
+					100% {
+						inset: 0;
+						transform: rotate(90deg)
+					}
+				}
+			</style>
+		</div>
 	</div>
 </body>
 
