@@ -816,6 +816,93 @@
 				}
 			</style>
 		</div>
+		<div class="loader17">
+			<style>
+				.loader17 {
+					width: 40px;
+					height: 60px;
+					position: relative;
+				}
+
+				.loader17::before,
+				.loader17::after {
+					content: "";
+					position: absolute;
+					inset: 0;
+					background: #514b82;
+					clip-path: polygon(0 0, 100% 0, 100% 67%, 50% 67%, 50% 34%, 0 34%);
+					animation: sp7 2s infinite;
+				}
+
+				.loader17::after {
+					--s: -1, -1;
+				}
+
+				@keyframes sp7 {
+
+					0%,
+					10% {
+						transform: scale(var(--s, 1)) translate(0, 0) rotate(0deg)
+					}
+
+					33% {
+						transform: scale(var(--s, 1)) translate(0, -20px) rotate(0deg)
+					}
+
+					66% {
+						transform: scale(var(--s, 1)) translate(10px, -20px) rotate(-90deg)
+					}
+
+					90%,
+					100% {
+						transform: scale(var(--s, 1)) translate(10px, -10px) rotate(-90deg)
+					}
+				}
+			</style>
+		</div>
+		<div class="loader18">
+			<style>
+				.loader18 {
+					width: 40px;
+					aspect-ratio: 1;
+					color: #f03355;
+					position: relative;
+					background: radial-gradient(10px, currentColor 94%, #0000);
+				}
+
+				.loader18:before {
+					content: '';
+					position: absolute;
+					inset: 0;
+					border-radius: 50%;
+					background:
+						radial-gradient(9px at bottom right, #0000 94%, currentColor) top left,
+						radial-gradient(9px at bottom left, #0000 94%, currentColor) top right,
+						radial-gradient(9px at top right, #0000 94%, currentColor) bottom left,
+						radial-gradient(9px at top left, #0000 94%, currentColor) bottom right;
+					background-size: 20px 20px;
+					background-repeat: no-repeat;
+					animation: l18 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+				}
+
+				@keyframes l18 {
+					33% {
+						inset: -10px;
+						transform: rotate(0deg)
+					}
+
+					66% {
+						inset: -10px;
+						transform: rotate(90deg)
+					}
+
+					100% {
+						inset: 0;
+						transform: rotate(90deg)
+					}
+				}
+			</style>
+		</div>
 	</div>
 </body>
 
