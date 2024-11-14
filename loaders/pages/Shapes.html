@@ -903,6 +903,142 @@
 				}
 			</style>
 		</div>
+		<div class="loader19">
+			<style>
+				.loader19 {
+					width: 40px;
+					height: 20px;
+					background: orange;
+					position: relative;
+					animation: l19-0 1.5s infinite linear;
+				}
+
+				.loader19:before,
+				.loader19:after {
+					content: "";
+					position: absolute;
+					background: inherit;
+					bottom: 100%;
+					width: 50%;
+					height: 100%;
+					animation: inherit;
+					animation-name: l19-1;
+				}
+
+				.loader19:before {
+					left: 0;
+					--s: -1, 1;
+				}
+
+				.loader19:after {
+					right: 0;
+				}
+
+				@keyframes l19-0 {
+
+					0%,
+					30% {
+						transform: translateY(0) scaleY(1)
+					}
+
+					49.99% {
+						transform: translateY(-50%) scaleY(1)
+					}
+
+					50% {
+						transform: translateY(-50%) scaleY(-1)
+					}
+
+					70%,
+					100% {
+						transform: translateY(-100%) scaleY(-1)
+					}
+				}
+
+				@keyframes l19-1 {
+
+					0%,
+					10%,
+					90%,
+					100% {
+						transform: scale(var(--s, 1)) translate(0)
+					}
+
+					30%,
+					70% {
+						transform: scale(var(--s, 1)) translate(20px)
+					}
+
+					50% {
+						transform: scale(var(--s, 1)) translate(20px, 20px)
+					}
+				}
+			</style>
+		</div>
+		<div class="loader20">
+			<style>
+				.loader20 {
+					width: 40px;
+					aspect-ratio: 1;
+					display: flex;
+					transform-origin: 0% 150%;
+					animation: l20-0 2s infinite linear;
+				}
+
+				.loader20:before,
+				.loader20:after {
+					content: "";
+					flex: 1;
+					background: #f03355;
+					animation: l20-1 1s infinite linear alternate;
+					border-radius: 100px 0 0 100px;
+					transform-origin: 100% 100%;
+				}
+
+				.loader20:after {
+					border-radius: 0 100px 100px 0;
+					transform-origin: 0% 100%;
+					--s: -1;
+				}
+
+				@keyframes l20-0 {
+
+					0%,
+					10% {
+						transform: translateY(0) scaleY(1)
+					}
+
+					49.99% {
+						transform: translateY(-100%) scaleY(1)
+					}
+
+					50% {
+						transform: translateY(-100%) scaleY(-1)
+					}
+
+					90%,
+					100% {
+						transform: translateY(-200%) scaleY(-1)
+					}
+				}
+
+				@keyframes l20-1 {
+
+					0%,
+					20% {
+						transform: rotate(0deg) translate(0, 0) rotate(0deg)
+					}
+
+					50% {
+						transform: rotate(calc(var(--s, 1)*-90deg)) translate(0, 0) rotate(0deg)
+					}
+
+					100% {
+						transform: rotate(calc(var(--s, 1)*-90deg)) translate(0, -20px) rotate(calc(var(--s, 1)*-90deg))
+					}
+				}
+			</style>
+		</div>
 	</div>
 </body>
 
