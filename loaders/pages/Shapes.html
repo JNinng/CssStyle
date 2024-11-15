@@ -1039,6 +1039,109 @@
 				}
 			</style>
 		</div>
+		<div class="loader21">
+			<style>
+				.loader21 {
+					width: 40px;
+					aspect-ratio: 1;
+					display: flex;
+				}
+
+				.loader21:before,
+				.loader21:after {
+					content: "";
+					flex: 1;
+					background: #f03355;
+					animation: l21 2s infinite;
+					border-radius: 100px 0 0 100px;
+					transform-origin: top right;
+					transform: translateY(calc(var(--s, 1)*0%)) rotate(0);
+				}
+
+				.loader21:after {
+					transform-origin: bottom left;
+					border-radius: 0 100px 100px 0;
+					--s: -1;
+				}
+
+				@keyframes l21 {
+					33% {
+						transform: translate(0, calc(var(--s, 1)*50%)) rotate(0)
+					}
+
+					66% {
+						transform: translate(0, calc(var(--s, 1)*50%)) rotate(-90deg)
+					}
+
+					90%,
+					100% {
+						transform: translate(calc(var(--s, 1)*-100%), calc(var(--s, 1)*50%)) rotate(-90deg)
+					}
+				}
+			</style>
+		</div>
+		<div class="loader22">
+			<style>
+				.loader22 {
+					width: 36px;
+					aspect-ratio: 1;
+					color: #514b82;
+					background: conic-gradient(from 134deg at top, currentColor 92deg, #0000 0);
+					position: relative;
+					animation: l22-0 2s infinite linear;
+				}
+
+				.loader22:before,
+				.loader22:after {
+					content: "";
+					position: absolute;
+					width: 50%;
+					height: 50%;
+					background: currentColor;
+					transform-origin: top right;
+					clip-path: polygon(100% 0, 100% 100%, 0 100%);
+					inset: auto 100% 0 auto;
+					animation: l22-1 1s infinite linear alternate;
+				}
+
+				.loader22:after {
+					inset: auto auto 0 100%;
+					transform-origin: top left;
+					--s: -1;
+					clip-path: polygon(0 0, 100% 100%, 0 100%);
+				}
+
+				@keyframes l22-0 {
+
+					0%,
+					49.99% {
+						transform: scaleY(1)
+					}
+
+					50%,
+					90% {
+						transform: scaleY(-1)
+					}
+
+					100% {
+						transform: scaleY(-1) rotate(180deg)
+					}
+				}
+
+				@keyframes l22-1 {
+
+					0%,
+					30% {
+						transform: rotate(calc(var(--s, 1)*0))
+					}
+
+					70%,
+					100% {
+						transform: rotate(calc(var(--s, 1)*180deg))
+					}
+				}
+			</style>
+		</div>
 	</div>
 </body>
 
