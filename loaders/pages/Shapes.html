@@ -1142,6 +1142,159 @@
 				}
 			</style>
 		</div>
+		<div class="loader23">
+			<style>
+				.loader23 {
+					width: 36px;
+					aspect-ratio: 1;
+					color: #25b09b;
+					background: linear-gradient(45deg, #0000 24%, currentColor 0 76%, #0000 0);
+					position: relative;
+					animation: l23-0 1.5s infinite;
+				}
+
+				.loader23:before,
+				.loader23:after {
+					content: "";
+					position: absolute;
+					width: 50%;
+					height: 50%;
+					background: currentColor;
+					transform-origin: top left;
+					clip-path: polygon(-2px 0, 0 -1px, 100% 100%, -2px 100%);
+					inset: auto auto 0 0;
+					animation: l23-1 1.5s infinite;
+				}
+
+				.loader23:after {
+					inset: 0 0 auto auto;
+					transform-origin: bottom right;
+					clip-path: polygon(0 0, calc(100% + 2px) 0, calc(100% + 2px) 100%, 100% calc(100% + 1px));
+				}
+
+				@keyframes l23-0 {
+
+					0%,
+					50% {
+						transform: skewX(0)
+					}
+
+					90%,
+					100% {
+						transform: skewX(-45deg)
+					}
+				}
+
+				@keyframes l23-1 {
+
+					40%,
+					100% {
+						transform: rotate(180deg);
+						box-shadow: 0 0 0 3px;
+					}
+				}
+			</style>
+		</div>
+		<div class="loader24">
+			<style>
+				.loader24 {
+					width: 40px;
+					aspect-ratio: 1;
+					display: grid;
+				}
+
+				.loader24:before,
+				.loader24:after {
+					content: "";
+					background: orange;
+					transform-origin: left;
+					animation: l24 2s infinite;
+				}
+
+				.loader24:before {
+					transform-origin: right;
+					--s: -1;
+				}
+
+				@keyframes l24 {
+
+					0%,
+					10% {
+						transform: translate(0, 0) scale(1)
+					}
+
+					33% {
+						transform: translate(calc(var(--s, 1)*50%), 0) scale(1)
+					}
+
+					66% {
+						transform: translate(calc(var(--s, 1)*50%), calc(var(--s, 1)*-50%)) scale(1)
+					}
+
+					90%,
+					100% {
+						transform: translate(calc(var(--s, 1)*50%), calc(var(--s, 1)*-50%)) scale(0.5, 2)
+					}
+				}
+			</style>
+		</div>
+		<div class="loader25">
+			<style>
+				.loader25 {
+					width: 50px;
+					aspect-ratio: 1;
+					border-radius: 50%;
+					background: #514b82;
+					-webkit-mask: radial-gradient(circle closest-side at 50% 40%, #0000 94%, #000);
+					transform-origin: 50% 40%;
+					animation: l25 1s infinite linear;
+				}
+
+				@keyframes l25 {
+					100% {
+						transform: rotate(1turn)
+					}
+				}
+			</style>
+		</div>
+		<div class="loader26">
+			<style>
+				.loader26 {
+					width: 50px;
+					aspect-ratio: 1;
+					display: grid;
+					-webkit-mask: conic-gradient(from 15deg, #0000, #000);
+					animation: l26 1s infinite steps(12);
+				}
+
+				.loader26,
+				.loader26:before,
+				.loader26:after {
+					background:
+						radial-gradient(closest-side at 50% 12.5%,
+							#f03355 96%, #0000) 50% 0/20% 80% repeat-y,
+						radial-gradient(closest-side at 12.5% 50%,
+							#f03355 96%, #0000) 0 50%/80% 20% repeat-x;
+				}
+
+				.loader26:before,
+				.loader26:after {
+					content: "";
+					grid-area: 1/1;
+					transform: rotate(30deg);
+				}
+
+				.loader26:after {
+					transform: rotate(60deg);
+				}
+
+				@keyframes l26 {
+					100% {
+						transform: rotate(1turn)
+					}
+				}
+			</style>
+		</div>
 	</div>
 </body>
 
