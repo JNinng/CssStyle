@@ -1413,6 +1413,112 @@
 				}
 			</style>
 		</div>
+		<div class="loader29">
+			<style>
+				.loader29 {
+					width: 60px;
+					aspect-ratio: 1;
+					--c: no-repeat linear-gradient(orange 0 0);
+					background:
+						var(--c) left 20px top 0,
+						var(--c) top 20px right 0,
+						var(--c) right 20px bottom 0,
+						var(--c) bottom 20px left 0;
+					background-size: calc(100%/3) calc(100%/3);
+					animation:
+						l29-1 .75s infinite alternate linear,
+						l29-2 1.5s infinite;
+				}
+
+				@keyframes l29-1 {
+
+					90%,
+					100% {
+						background-size: calc(2*100%/3) calc(100%/3), calc(100%/3) calc(2*100%/3)
+					}
+				}
+
+				@keyframes l29-2 {
+
+					0%,
+					49.99% {
+						transform: scaleX(1)
+					}
+
+					50%,
+					100% {
+						transform: scaleX(-1)
+					}
+				}
+			</style>
+		</div>
+		<div class="loader30">
+			<style>
+				.loader30 {
+					width: 40px;
+					aspect-ratio: 1;
+					display: grid;
+					animation: l30-0 1.5s infinite linear;
+				}
+
+				.loader30:before,
+				.loader30:after {
+					content: "";
+					grid-area: 1/1;
+					background: #25b09b;
+					animation: inherit;
+					animation-name: l30-1
+				}
+
+				.loader30:after {
+					transform-origin: bottom right;
+					--s: 1;
+				}
+
+				@keyframes l30-0 {
+
+					0%,
+					66% {
+						transform: scaleY(1)
+					}
+
+					66.01%,
+					100% {
+						transform: scaleY(-1)
+					}
+				}
+
+				@keyframes l30-1 {
+
+					0%,
+					10% {
+						transform: scaleX(calc(var(--s, -1)*-1)) rotate(calc(var(--s, 0)*90deg));
+						clip-path: polygon(0 0, 0 100%, 100% 100%)
+					}
+
+					33% {
+						transform: scaleX(calc(var(--s, -1)*-1)) rotate(calc(var(--s, 0)*0deg));
+						clip-path: polygon(0 0, 0 100%, 100% 100%)
+					}
+
+					66% {
+						transform: scaleX(calc(var(--s, -1)*-1)) rotate(calc(var(--s, 0)*0deg));
+						clip-path: polygon(0 0, 0 100%, 100% 0)
+					}
+
+					66.01% {
+						transform: scaleX(calc(var(--s, -1)*-1)) rotate(calc(var(--s, 0)*0deg));
+						clip-path: polygon(0 0, 0 100%, 100% 100%)
+					}
+
+					90%,
+					100% {
+						transform: scaleX(calc(var(--s, -1)*-1)) rotate(calc(var(--s, 0)*90deg));
+						clip-path: polygon(0 0, 0 100%, 100% 100%)
+					}
+				}
+			</style>
+		</div>
 	</div>
 </body>
 
