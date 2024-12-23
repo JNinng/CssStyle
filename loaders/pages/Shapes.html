@@ -1730,6 +1730,77 @@
 				}
 			</style>
 		</div>
+		<div class="loader36">
+			<style>
+				.loader36 {
+					width: 50px;
+					aspect-ratio: 1;
+					display: grid;
+				}
+
+				.loader36:before,
+				.loader36:after {
+					content: "";
+					grid-area: 1/1;
+					border-radius: 50%;
+					background: #f03355;
+					-webkit-mask: repeating-linear-gradient(#000 0 10px, #0000 0 20px);
+				}
+
+				.loader36:after {
+					-webkit-mask: repeating-linear-gradient(#0000 0 10px, #000 0 20px);
+					animation: l36 1.5s infinite;
+				}
+
+				@keyframes l36 {
+
+					0%,
+					10% {
+						transform: rotate(0) translate(0)
+					}
+
+					35% {
+						transform: rotate(0) translate(100%)
+					}
+
+					66% {
+						transform: rotate(180deg) translate(100%)
+					}
+
+					90%,
+					100% {
+						transform: rotate(180deg) translate(0)
+					}
+				}
+			</style>
+		</div>
+		<div class="loader37">
+			<style>
+				.loader37 {
+					width: 60px;
+					aspect-ratio: 1.154;
+					--c: #0000, #25b09b 0deg 62deg, #0000 60deg;
+					--c1: conic-gradient(from 149deg at top, var(--c));
+					--c2: conic-gradient(from -31deg at bottom, var(--c));
+					background:
+						var(--c1) top,
+						var(--c1) bottom right,
+						var(--c2) bottom,
+						var(--c1) bottom left;
+					background-size: 50% 50%;
+					background-repeat: no-repeat;
+					animation: l37 1s infinite;
+				}
+
+				@keyframes l37 {
+
+					80%,
+					100% {
+						background-position: bottom right, bottom left, bottom, top
+					}
+				}
+			</style>
+		</div>
 	</div>
 </body>
 
