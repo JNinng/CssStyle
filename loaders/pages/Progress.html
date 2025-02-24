@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Progress</title>
+
+	<style>
+		html {
+			background-color: #575757;
+		}
+
+		.container {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 5px;
+			grid-auto-rows: 200px;
+			margin: 1rem 3rem;
+			counter-reset: num;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="loader1">
+			<style>
+				.loader1 {
+					width: 120px;
+					height: 20px;
+					background:
+						linear-gradient(#000 0 0) 0/0% no-repeat #ddd;
+					animation: l1 2s infinite linear;
+				}
+
+				@keyframes l1 {
+					100% {
+						background-size: 100%
+					}
+				}
+			</style>
+		</div>
+		<div class="loader2">
+			<style>
+				.loader2 {
+					width: 120px;
+					height: 20px;
+					border-radius: 20px;
+					background:
+						linear-gradient(orange 0 0) 0/0% no-repeat lightblue;
+					animation: l2 2s infinite steps(10);
+				}
+
+				@keyframes l2 {
+					100% {
+						background-size: 110%
+					}
+				}
+			</style>
+		</div>
+	</div>
+</body>
+
+</html>
