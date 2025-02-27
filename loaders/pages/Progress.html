@@ -162,6 +162,45 @@
 				}
 			</style>
 		</div>
+		<div class="loader7">
+			<style>
+				.loader7 {
+					width: 120px;
+					height: 24px;
+					-webkit-mask:
+						radial-gradient(circle closest-side, #000 94%, #0000) 0 0/25% 100%,
+						linear-gradient(#000 0 0) center/calc(100% - 12px) calc(100% - 12px) no-repeat;
+					background:
+						linear-gradient(#25b09b 0 0) 0/0% no-repeat #ddd;
+					animation: l7 2s infinite linear;
+				}
+
+				@keyframes l7 {
+					100% {
+						background-size: 100%
+					}
+				}
+			</style>
+		</div>
+		<div class="loader8">
+			<style>
+				.loader8 {
+					width: 60px;
+					aspect-ratio: 1;
+					border-radius: 50%;
+					-webkit-mask: linear-gradient(0deg, #000 55%, #0000 0) bottom/100% 18.18%;
+					background:
+						linear-gradient(#f03355 0 0) bottom/100% 0% no-repeat #ddd;
+					animation: l8 2s infinite steps(7);
+				}
+
+				@keyframes l8 {
+					100% {
+						background-size: 100% 115%
+					}
+				}
+			</style>
+		</div>
 	</div>
 </body>
 
