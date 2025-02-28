@@ -201,6 +201,59 @@
 				}
 			</style>
 		</div>
+		<div class="loader9">
+			<style>
+				.loader9 {
+					--r1: 154%;
+					--r2: 68.5%;
+					width: 60px;
+					aspect-ratio: 1;
+					border-radius: 50%;
+					background:
+						radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #269af2 80%),
+						radial-gradient(var(--r1) var(--r2) at bottom, #269af2 79.5%, #0000 80%),
+						radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #269af2 80%),
+						#ccc;
+					background-size: 50.5% 220%;
+					background-position: -100% 0%, 0% 0%, 100% 0%;
+					background-repeat: no-repeat;
+					animation: l9 2s infinite linear;
+				}
+
+				@keyframes l9 {
+					33% {
+						background-position: 0% 33%, 100% 33%, 200% 33%
+					}
+
+					66% {
+						background-position: -100% 66%, 0% 66%, 100% 66%
+					}
+
+					100% {
+						background-position: 0% 100%, 100% 100%, 200% 100%
+					}
+				}
+			</style>
+		</div>
+		<div class="loader10">
+			<style>
+				.loader10 {
+					width: 120px;
+					height: 60px;
+					border-radius: 200px 200px 0 0;
+					-webkit-mask: repeating-radial-gradient(farthest-side at bottom, #0000 0, #000 1px 12%, #0000 calc(12% + 1px) 20%);
+					background:
+						radial-gradient(farthest-side at bottom, #514b82 0 95%, #0000 0) bottom/0% 0% no-repeat #ddd;
+					animation: l10 2s infinite steps(6);
+				}
+
+				@keyframes l10 {
+					100% {
+						background-size: 120% 120%
+					}
+				}
+			</style>
+		</div>
 	</div>
 </body>
 
