@@ -394,6 +394,71 @@
 				}
 			</style>
 		</div>
+		<div class="loader15">
+			<style>
+				.loader15 {
+					width: 80px;
+					aspect-ratio: 1.154;
+					clip-path: polygon(50% 0, 100% 100%, 0 100%);
+					--c: no-repeat linear-gradient(#f03355 0 0);
+					background: var(--c), var(--c), var(--c), var(--c), var(--c);
+					background-size: 100% calc(100%/5 + 1px);
+					animation: l15 2s infinite;
+				}
+
+				@keyframes l15 {
+					0% {
+						background-position: 0 calc(-2*100%/4), 0 calc(-2*100%/4), 0 calc(-2*100%/4), 0 calc(-2*100%/4), 0 calc(-2*100%/4)
+					}
+
+					20% {
+						background-position: 0 calc(4*100%/4), 0 calc(-2*100%/4), 0 calc(-2*100%/4), 0 calc(-2*100%/4), 0 calc(-2*100%/4)
+					}
+
+					40% {
+						background-position: 0 calc(4*100%/4), 0 calc(3*100%/4), 0 calc(-2*100%/4), 0 calc(-2*100%/4), 0 calc(-2*100%/4)
+					}
+
+					60% {
+						background-position: 0 calc(4*100%/4), 0 calc(3*100%/4), 0 calc(2*100%/4), 0 calc(-2*100%/4), 0 calc(-2*100%/4)
+					}
+
+					80% {
+						background-position: 0 calc(4*100%/4), 0 calc(3*100%/4), 0 calc(2*100%/4), 0 calc(1*100%/4), 0 calc(-2*100%/4)
+					}
+
+					100% {
+						background-position: 0 calc(4*100%/4), 0 calc(3*100%/4), 0 calc(2*100%/4), 0 calc(1*100%/4), 0 calc(0*100%/4)
+					}
+				}
+			</style>
+		</div>
+		<div class="loader16">
+			<style>
+				.loader16 {
+					height: 4px;
+					width: 130px;
+					--c: no-repeat linear-gradient(#6100ee 0 0);
+					background: var(--c), var(--c), #d7b8fc;
+					background-size: 60% 100%;
+					animation: l16 3s infinite;
+				}
+
+				@keyframes l16 {
+					0% {
+						background-position: -150% 0, -150% 0
+					}
+
+					66% {
+						background-position: 250% 0, -150% 0
+					}
+
+					100% {
+						background-position: 250% 0, 250% 0
+					}
+				}
+			</style>
+		</div>
 	</div>
 </body>
 
