@@ -459,6 +459,66 @@
 				}
 			</style>
 		</div>
+		<div class="loader17">
+			<style>
+				.loader17 {
+					width: 120px;
+					height: 20px;
+					-webkit-mask: radial-gradient(circle closest-side, #000 94%, #0000) left/20% 100%;
+					background: linear-gradient(#000 0 0) left/0% 100% no-repeat #ddd;
+					animation: l17 2s infinite steps(6);
+				}
+
+				@keyframes l17 {
+					100% {
+						background-size: 120% 100%
+					}
+				}
+			</style>
+		</div>
+		<div class="loader18">
+			<style>
+				.loader18 {
+					width: 60px;
+					aspect-ratio: 1;
+					border: 15px solid #ddd;
+					border-radius: 50%;
+					position: relative;
+					transform: rotate(45deg);
+				}
+
+				.loader18::before {
+					content: "";
+					position: absolute;
+					inset: -15px;
+					border-radius: 50%;
+					border: 15px solid #514b82;
+					animation: l18 2s infinite linear;
+				}
+
+				@keyframes l18 {
+					0% {
+						clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
+					}
+
+					25% {
+						clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
+					}
+
+					50% {
+						clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+					}
+
+					75% {
+						clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)
+					}
+
+					100% {
+						clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
+					}
+				}
+			</style>
+		</div>
 	</div>
 </body>
 
