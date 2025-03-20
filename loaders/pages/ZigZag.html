@@ -123,6 +123,50 @@
 				}
 			</style>
 		</div>
+		<div class="loader5">
+			<style>
+				.loader5 {
+					height: 27px;
+					aspect-ratio: 5;
+					--c: #000 90deg, #0000 0;
+					background:
+						conic-gradient(from 135deg at top, var(--c)),
+						conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+					background-size: 20% 50%;
+					background-repeat: repeat-x;
+					clip-path: inset(0 60% 0 0);
+					animation: l5 .8s infinite linear alternate;
+				}
+
+				@keyframes l5 {
+					to {
+						clip-path: inset(0 0 0 60%)
+					}
+				}
+			</style>
+		</div>
+		<div class="laoder6">
+			<style>
+				.loader6 {
+					height: 27px;
+					aspect-ratio: 5;
+					--c: #000 90deg, #0000 0;
+					background:
+						conic-gradient(from 135deg at top, var(--c)),
+						conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+					background-size: 20% 50%;
+					background-repeat: repeat-x;
+					-webkit-mask: repeating-linear-gradient(90deg, #000 0 15%, #0000 0 50%) 0 0/200%;
+					animation: l6 .8s infinite linear;
+				}
+
+				@keyframes l6 {
+					to {
+						-webkit-mask-position: -100% 0
+					}
+				}
+			</style>
+		</div>
 	</div>
 </body>
 
