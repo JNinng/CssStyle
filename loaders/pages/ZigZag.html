@@ -145,7 +145,7 @@
 				}
 			</style>
 		</div>
-		<div class="laoder6">
+		<div class="loader6">
 			<style>
 				.loader6 {
 					height: 27px;
@@ -163,6 +163,49 @@
 				@keyframes l6 {
 					to {
 						-webkit-mask-position: -100% 0
+					}
+				}
+			</style>
+		</div>
+		<div class="loader7">
+			<style>
+				.loader7 {
+					width: 90px;
+					height: 14px;
+					color: #000;
+					background:
+						linear-gradient(90deg, currentColor 50%, #0000 0) repeat-x,
+						conic-gradient(from 45deg at right 7px top 50%, currentColor 90deg, #0000 0);
+					background-position: calc(100%/3) 50%;
+					background-size: calc(100%/4) 60%, calc(100%/4) 100%;
+					animation: l7 0.5s infinite linear;
+				}
+
+				@keyframes l7 {
+					100% {
+						background-position: 0 50%
+					}
+				}
+			</style>
+		</div>
+		<div class="loader8">
+			<style>
+				.loader8 {
+					width: 90px;
+					height: 12px;
+					--c: #000 50%, #0000 0;
+					background:
+						linear-gradient(90deg, var(--c)) 0 0%,
+						linear-gradient(-90deg, var(--c)) 0 50%,
+						linear-gradient(90deg, var(--c)) 0 100%;
+					background-size: 8px calc(100%/3);
+					background-repeat: repeat-x;
+					animation: l8 .25s infinite linear;
+				}
+
+				@keyframes l8 {
+					100% {
+						background-position: -8px 0%, -8px 50%, -8px 100%
 					}
 				}
 			</style>
