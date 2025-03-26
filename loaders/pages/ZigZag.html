@@ -376,6 +376,40 @@
 				}
 			</style>
 		</div>
+		<div class="loader15">
+			<style>
+				.loader15 {
+					display: inline-grid;
+				}
+
+				.loader15:before,
+				.loader15:after {
+					content: "";
+					grid-area: 1/1;
+					height: 28px;
+					aspect-ratio: 5;
+					--c: #000 90deg, #0000 0;
+					background:
+						conic-gradient(from 135deg at top, var(--c)),
+						conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+					background-size: 20% 50%;
+					background-repeat: repeat-x;
+					-webkit-mask: repeating-linear-gradient(90deg, #000 0 10%, #0000 0 20%);
+					clip-path: inset(0 100% 0 0);
+					animation: l15 1.5s infinite steps(6, jump-none) alternate;
+				}
+
+				.loader15:after {
+					scale: -1 1;
+				}
+
+				@keyframes l15 {
+					to {
+						clip-path: inset(0)
+					}
+				}
+			</style>
+		</div>
 	</div>
 </body>
 
