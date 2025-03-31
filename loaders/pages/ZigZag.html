@@ -525,6 +525,40 @@
 				}
 			</style>
 		</div>
+		<div class="loader20">
+			<style>
+				.loader20 {
+					display: inline-grid;
+				}
+
+				.loader20:before,
+				.loader20:after {
+					content: "";
+					height: 27px;
+					aspect-ratio: 5;
+					--c: #000 90deg, #0000 0;
+					background:
+						conic-gradient(from 135deg at top, var(--c)),
+						conic-gradient(from -45deg at bottom, var(--c)) 12.5% 100%;
+					background-size: 20% 50%;
+					background-repeat: repeat-x;
+					clip-path: inset(0 50%);
+					animation: l20 1s infinite steps(5) alternate;
+				}
+
+				.loader20:after {
+					animation-delay: -1s;
+				}
+
+				@keyframes l20 {
+
+					90%,
+					to {
+						clip-path: inset(0)
+					}
+				}
+			</style>
+		</div>
 	</div>
 </body>
 
