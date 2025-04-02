@@ -210,6 +210,55 @@
 		<div class="loader6">
 			<style>
 				.loader6 {
+					--s: 20px;
+
+					--_d: calc(0.353*var(--s));
+					width: calc(var(--s) + var(--_d));
+					aspect-ratio: 1;
+					display: grid;
+				}
+
+				.loader6:before,
+				.loader6:after {
+					content: "";
+					grid-area: 1/1;
+					clip-path: polygon(var(--_d) 0, 100% 0, 100% calc(100% - var(--_d)), calc(100% - var(--_d)) 100%, 0 100%, 0 var(--_d));
+					background:
+						conic-gradient(from -90deg at calc(100% - var(--_d)) var(--_d),
+							#fff 135deg, #666 0 270deg, #aaa 0);
+					animation: l6 2s infinite;
+				}
+
+				.loader6:after {
+					animation-delay: -1s;
+				}
+
+				@keyframes l6 {
+					0% {
+						transform: translate(0, 0)
+					}
+
+					25% {
+						transform: translate(30px, 0)
+					}
+
+					50% {
+						transform: translate(30px, 30px)
+					}
+
+					75% {
+						transform: translate(0, 30px)
+					}
+
+					100% {
+						transform: translate(0, 0)
+					}
+				}
+			</style>
+		</div>
+		<div class="loader7">
+			<style>
+				.loader7 {
 					--s: 25px;
 					--g: 5px;
 
@@ -237,6 +286,218 @@
 				@keyframes l7 {
 					to {
 						background-position: 150% 0%
+					}
+				}
+			</style>
+		</div>
+		<div class="loader8">
+			<style>
+				.loader8 {
+					--s: 25px;
+					--g: 5px;
+
+					height: calc(1.353*var(--s) + var(--g));
+					aspect-ratio: 3;
+					display: grid;
+					justify-items: end;
+					overflow: hidden;
+					--_m: linear-gradient(90deg, #0000, #000 15px calc(100% - 15px), #0000);
+					-webkit-mask: var(--_m);
+					mask: var(--_m);
+				}
+
+				.loader8:before {
+					content: "";
+					width: calc(4*100%/3);
+					background:
+						conic-gradient(from -90deg at var(--s) calc(0.353*var(--s)),
+							#fff 135deg, #666 0 270deg, #aaa 0);
+					--_m:
+						linear-gradient(to bottom right,
+							#0000 calc(0.25*var(--s)), #000 0 calc(100% - calc(0.25*var(--s)) - 1.414*var(--g)), #0000 0),
+						conic-gradient(from -90deg at right var(--g) bottom var(--g), #000 90deg, #0000 0);
+					-webkit-mask: var(--_m);
+					mask: var(--_m);
+					background-size: calc(100%/4) 100%;
+					-webkit-mask-size: calc(100%/4) 100%;
+					mask-size: calc(100%/4) 100%;
+					-webkit-mask-composite: source-in;
+					mask-composite: intersect;
+					animation: l8 1s infinite linear;
+				}
+
+				@keyframes l8 {
+					to {
+						transform: translate(calc(100%/4))
+					}
+				}
+			</style>
+		</div>
+		<div class="loader9">
+			<style>
+				.loader9 {
+					--s: 25px;
+					--g: 5px;
+
+					width: calc(2*(1.353*var(--s) + var(--g)));
+					aspect-ratio: 1;
+					background:
+						linear-gradient(#ff1818 0 0) left/50% 100% no-repeat,
+						conic-gradient(from -90deg at var(--s) calc(0.353*var(--s)),
+							#fff 135deg, #666 0 270deg, #aaa 0);
+					background-blend-mode: multiply;
+					--_m:
+						linear-gradient(to bottom right,
+							#0000 calc(0.25*var(--s)), #000 0 calc(100% - calc(0.25*var(--s)) - 1.414*var(--g)), #0000 0),
+						conic-gradient(from -90deg at right var(--g) bottom var(--g), #000 90deg, #0000 0);
+					-webkit-mask: var(--_m);
+					mask: var(--_m);
+					background-size: 50% 50%;
+					-webkit-mask-size: 50% 50%;
+					mask-size: 50% 50%;
+					-webkit-mask-composite: source-in;
+					mask-composite: intersect;
+					animation: l9 1.5s infinite;
+				}
+
+				@keyframes l9 {
+
+					0%,
+					12.5% {
+						background-position: 0% 0%, 0 0
+					}
+
+					12.6%,
+					37.5% {
+						background-position: 100% 0%, 0 0
+					}
+
+					37.6%,
+					62.5% {
+						background-position: 100% 100%, 0 0
+					}
+
+					62.6%,
+					87.5% {
+						background-position: 0% 100%, 0 0
+					}
+
+					87.6%,
+					100% {
+						background-position: 0% 0%, 0 0
+					}
+				}
+			</style>
+		</div>
+		<div class="loader10">
+			<style>
+				.loader10 {
+					--s: 25px;
+					--g: 5px;
+
+					width: calc(3*(1.353*var(--s) + var(--g)));
+					display: grid;
+					justify-items: end;
+					aspect-ratio: 3;
+					overflow: hidden;
+					--_m: linear-gradient(90deg, #0000, #000 15px calc(100% - 15px), #0000);
+					-webkit-mask: var(--_m);
+					mask: var(--_m);
+				}
+
+				.loader10:before {
+					content: "";
+					width: 200%;
+					background:
+						linear-gradient(90deg, #ff1818 50%, #0000 0),
+						conic-gradient(from -90deg at var(--s) calc(0.353*var(--s)),
+							#fff 135deg, #666 0 270deg, #aaa 0);
+					background-blend-mode: multiply;
+					--_m:
+						linear-gradient(to bottom right,
+							#0000 calc(0.25*var(--s)), #000 0 calc(100% - calc(0.25*var(--s)) - 1.414*var(--g)), #0000 0),
+						conic-gradient(from -90deg at right var(--g) bottom var(--g), #000 90deg, #0000 0);
+					-webkit-mask: var(--_m);
+					mask: var(--_m);
+					background-size: calc(100%/3) 100%, calc(100%/6) 100%;
+					-webkit-mask-size: calc(100%/6) 100%;
+					mask-size: calc(100%/6) 100%;
+					-webkit-mask-composite: source-in;
+					mask-composite: intersect;
+					animation: l10 1s infinite linear;
+				}
+
+				@keyframes l10 {
+					to {
+						transform: translate(calc(100%/3))
+					}
+				}
+			</style>
+		</div>
+		<div class="loader11">
+			<style>
+				.loader11 {
+					--s: 40px;
+					--g: 5px;
+
+					height: calc(var(--s) + var(--g));
+					aspect-ratio: 3;
+					background:
+						radial-gradient(calc(var(--s)/sqrt(2)) at calc(50% - .1*var(--s)) calc(50% - .2*var(--s)), #0000 5%, 60%, #111 98%),
+						linear-gradient(#FE4365 0 0) no-repeat #fff;
+					background-size: calc(100%/3) 100%;
+					mask: radial-gradient(calc(var(--s)/2), #000 calc(100% - 1px), #0000) 0/calc(100%/3) 100%;
+					animation: l11 steps(3) 1.5s infinite;
+				}
+
+				@keyframes l11 {
+					to {
+						background-position: 0, 150%
+					}
+				}
+			</style>
+		</div>
+		<div class="loader12">
+			<style>
+				.loader12 {
+					--s: 40px;
+					--g: 5px;
+
+					height: calc(2*(var(--s) + var(--g)));
+					aspect-ratio: 1;
+					background:
+						radial-gradient(calc(var(--s)/sqrt(2)) at calc(50% - .1*var(--s)) calc(50% - .2*var(--s)), #0000 5%, 60%, #111 98%),
+						linear-gradient(#FE4365 0 0) no-repeat #fff;
+					background-size: 50% 50%;
+					mask: radial-gradient(calc(var(--s)/2), #000 calc(100% - 1px), #0000) 0 0/50% 50%;
+					animation: l12 steps(3) 1.5s infinite;
+				}
+
+				@keyframes l12 {
+
+					0%,
+					12.5% {
+						background-position: 0 0
+					}
+
+					12.6%,
+					37.5% {
+						background-position: 0 0, 100% 0
+					}
+
+					37.6%,
+					62.5% {
+						background-position: 0 0, 100% 100%
+					}
+
+					62.6%,
+					87.5% {
+						background-position: 0 0, 0 100%
+					}
+
+					87.6%,
+					100% {
+						background-position: 0 0
 					}
 				}
 			</style>
